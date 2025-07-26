@@ -1,0 +1,57 @@
+./jpf-sv-comp --propertyfile ../../sv-benchmarks/java/properties/runtime-exception.prp ../../sv-benchmarks/java/common ../../sv-benchmarks/java/jpf-regression/ExSymExeF2I_false
+
+
+--------------------------------------------------------------------------------
+
+
+/tmp/jpf-benchmark.4wFTgA/config.jpf
+LD_LIBRARY_PATH=/home/f8/Desktop/bench-defs/bin/spf-S2wZ7gwkvo/jpf-symbc/lib:/home/f8/Desktop/SPF/jpf-symbc/lib:
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 8b82638acdeb8140d063107c30b29a0161fcc31c) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 26/7/25 2:57 AM
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.test(Main.java:41)
+	at Main.main(Main.java:34)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.test(Main.java:41)
+	at Main.main(Main.java:34)
+
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.test(Main.java:4..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=1,visited=0,backtracked=0,end=0
+search:             maxDepth=1,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=0
+heap:               new=467,released=0,maxLive=0,gcCycles=0
+instructions:       6358
+max memory:         44MB
+loaded code:        classes=85,methods=1660
+
+====================================================== search finished: 26/7/25 2:57 AM
+UNSAFE

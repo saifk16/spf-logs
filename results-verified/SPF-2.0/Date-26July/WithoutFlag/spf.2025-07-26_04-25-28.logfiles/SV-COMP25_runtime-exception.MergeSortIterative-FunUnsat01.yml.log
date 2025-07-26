@@ -1,0 +1,195 @@
+./jpf-sv-comp --propertyfile ../../sv-benchmarks/java/properties/runtime-exception.prp ../../sv-benchmarks/java/common ../../sv-benchmarks/java/algorithms/MergeSortIterative-FunUnsat01
+
+
+--------------------------------------------------------------------------------
+
+
+/tmp/jpf-benchmark.sRTSmM/config.jpf
+LD_LIBRARY_PATH=/home/f8/Desktop/bench-defs/bin/spf2-wqB1rj98YZ/jpf-symbc/lib:/home/f8/Desktop/SPF/jpf-symbc/lib:
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 8b82638acdeb8140d063107c30b29a0161fcc31c) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 26/7/25 4:30 AM
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:33)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.iterativeMergesort(Main.java:46)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:101)
+	at Main.iterativeMergesort(Main.java:49)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:101)
+	at Main.iterativeMergesort(Main.java:49)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:101)
+	at Main.iterativeMergesort(Main.java:49)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:101)
+	at Main.iterativeMergesort(Main.java:49)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:102)
+	at Main.iterativeMergesort(Main.java:49)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:100)
+	at Main.iterativeMergesort(Main.java:49)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:101)
+	at Main.iterativeMergesort(Main.java:49)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:101)
+	at Main.iterativeMergesort(Main.java:49)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:99)
+	at Main.iterativeMergesort(Main.java:49)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:98)
+	at Main.iterativeMergesort(Main.java:49)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:98)
+	at Main.iterativeMergesort(Main.java:49)
+	at Main.main(Main.java:36)
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.ArrayIndexOutOfBoundsException: index greater than array bounds
+	at Main.main(Main.java:38)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:38)
+
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.ArrayIndexOutOfBoundsException: index gr..."
+
+====================================================== statistics
+elapsed time:       00:00:01
+states:             new=69,visited=0,backtracked=61,end=0
+search:             maxDepth=13,constraints=13
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=29
+heap:               new=514,released=33,maxLive=460,gcCycles=31
+instructions:       6889
+max memory:         44MB
+loaded code:        classes=90,methods=1869
+
+====================================================== search finished: 26/7/25 4:30 AM
+UNKNOWN
