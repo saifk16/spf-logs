@@ -1,0 +1,1 @@
+![Goosle Summer of Code](GsocLogo.png)
