@@ -1,1 +1,1 @@
-![Goosle Summer of Code](GsocLogo.png)
+![Google Summer of Code](GSoC_Logo.png)
