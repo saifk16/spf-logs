@@ -1,7 +1,7 @@
 ![Google Summer of Code](GSoC_Logo.png)
 ---
 <div align="center">
-<font size ="7"> 
+<font size ="32"> 
 <strong>FINAL REPORT (GSoC 2025)</strong> 
 </font>
 </div>
@@ -11,7 +11,7 @@
 </div>
 
 <div align="center">
-<font size ="6"> 
+<font size ="28"> 
 <strong>THE JPF TEAM</strong> 
 </font>
 </div>
