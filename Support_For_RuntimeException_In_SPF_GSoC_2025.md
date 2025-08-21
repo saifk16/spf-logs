@@ -27,9 +27,20 @@ The following report summarizes the work done during Google Summer of Code 2025 
 
 JPF also has extensions like **[Symbolic Pathfinder (SPF)](https://github.com/SymbolicPathFinder/jpf-symbc/)**, which combines symbolic execution with model checking and constraint solving for automated test case generation and error detection in Java bytecode. In SPF, programs are executed on symbolic, rather than concrete inputs.
 
+<br>
 <h3>Project Goal</h3>
 
-In this project support for throwing **runtime exceptions** like `NullPointerException` and `StringIndexOutOfBoundsException` were added, for some string functions like **contains()**, **startsWith()**, **endsWith**, **equals()**, **subString()** and **charAt()** also the score of SPF on sv-benchmarks ([sv-comp](https://sv-comp.sosy-lab.org/)) was not good, the score also got improved because of the support that was done in this project.
+In this project support for throwing **runtime exceptions** like `NullPointerException` and `StringIndexOutOfBoundsException` were added, for some string functions like **contains()**, **startsWith()**, **endsWith()**, **equals()**, **isEmpty()**, **subString()** and **charAt()** also the score of SPF on sv-benchmarks ([sv-comp](https://sv-comp.sosy-lab.org/)) was not good, the score also got improved because of the support that was done in this project.
+
+<br>
+<h3>Contributions</h3>
+
+All the code I have contributed can be found at [this url](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler).
+
+With those changes, methods like **contains()**, **startsWith()**, **endsWith**, **equals()**, **isEmpty()**, **subString()** and **charAt()** are supported to raise a `Runtime Exception`.
+
+- *NullPointerException* - **contains()**, **startsWith()**, **endsWith**, **equals()**, **isEmpty()**
+- *StringIndexOutOfBoundsException* - **subString()**, **charAt()** 
 
 
 
