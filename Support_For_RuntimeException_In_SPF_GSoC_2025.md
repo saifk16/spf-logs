@@ -66,6 +66,14 @@ String str = Verifier.nondetString();
 assert(str.subString(beginIndex));
 ```
 
+In the above example, similar to the first one we can clearly see that here also **str** is symbolic, but the main importance in **subString()** and **charAt** are the index that are passed to them, here we have the **beginIndex** which can be symbolic as well can be concrete as well.
+
+Earlier we only had one choice:
+
+- Handling the **subString()** or **charAt()** operation with atleast one parameter symbolic.
+
+But there should be two other choices (all total 3), because the **beginIndex** in this case can be less than 0 or it can also be greater than or equal to the length of the **str**, these two are the cases were we should raise the exception.
+
 > [!NOTE]
 > Although we have added support for the `NullPointerException` but the `Verifier.nondetString()` will never return null. 
 
