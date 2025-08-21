@@ -41,7 +41,7 @@ With those changes, methods like **contains()**, **startsWith()**, **endsWith**,
 
 <br>
 
-*<font color="red">NullPointerException</font>* - **contains()**, **startsWith()**, **endsWith**, **equals()**, **isEmpty()**
+***NullPointerException*** - *contains()*, *startsWith()*, *endsWith*, *equals()*, *isEmpty()*
 
 ```java
 String str = Verifier.nondetString();
@@ -59,7 +59,7 @@ But there should can be a third choice as well because the **str** can be equal 
 
 <br>
 
-*StringIndexOutOfBoundsException* - **subString()**, **charAt()** 
+***StringIndexOutOfBoundsException*** - *subString()*, *charAt()* 
 
 ```java
 String str = Verifier.nondetString();
