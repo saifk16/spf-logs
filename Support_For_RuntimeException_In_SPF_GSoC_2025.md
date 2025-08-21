@@ -41,7 +41,7 @@ With those changes, methods like **contains()**, **startsWith()**, **endsWith**,
 
 <br>
 
-*NullPointerException* - **contains()**, **startsWith()**, **endsWith**, **equals()**, **isEmpty()**
+*<font color="red">NullPointerException</font>* - **contains()**, **startsWith()**, **endsWith**, **equals()**, **isEmpty()**
 
 ```java
 String str = Verifier.nondetString();
