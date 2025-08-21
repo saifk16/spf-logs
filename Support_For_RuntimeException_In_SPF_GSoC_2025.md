@@ -56,7 +56,7 @@ Earlier we only had two choices:
 
 <br>
 
-But there should can be a third choice as well because the **str** can be equal to null as well as it is symbolic, so we need to add another choice for this case in the [SymbolicStringHandler](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler#diff-6feea6c550b38c071b2b438affe6dd6b0be73f795de404d4410b6354820375ecR931) in the method <u>handleBooleanStringInstructions</u> which is handling **contains()**, **startsWith()**, **endsWith**, **equals()**.
+But there should can be a third choice as well because the **str** can be equal to null as well as it is symbolic, so we need to add another choice for this case in the [SymbolicStringHandler](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler#diff-6feea6c550b38c071b2b438affe6dd6b0be73f795de404d4410b6354820375ecR931) in the method ***handleBooleanStringInstructions*** which is handling **contains()**, **startsWith()**, **endsWith**, **equals()**.
 
 **isEmpty** is not included in this method it is handled in the method [handleIsEmpty](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler#diff-6feea6c550b38c071b2b438affe6dd6b0be73f795de404d4410b6354820375ecR1371).
 
