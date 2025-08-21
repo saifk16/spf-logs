@@ -42,8 +42,6 @@ With those changes, methods like **contains()**, **startsWith()**, **endsWith**,
 - *NullPointerException* - **contains()**, **startsWith()**, **endsWith**, **equals()**, **isEmpty()**
 - *StringIndexOutOfBoundsException* - **subString()**, **charAt()** 
 
-<br>
-
 ```java
 String str = Verifier.nondetString();
 assert(str.contains("HELLO"));
@@ -62,6 +60,8 @@ But there should can be a third choice as well because the **str** can be equal 
 
 **isEmpty** is not included in this method it is handled in the method [handleIsEmpty](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler#diff-6feea6c550b38c071b2b438affe6dd6b0be73f795de404d4410b6354820375ecR1371).
 
+> [!NOTE]
+> Although we have added support for the `NullPointerException` but the `Verifier.nondetString()` will never return null. See the [issue 1438](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/issues/1438) and this file [Verifier.java](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/blob/5393b24a8864900ae00b6b159b7d9405b04fc62a/java/common/org/sosy_lab/sv_benchmarks/Verifier.java#L52-59)
 
 
 
