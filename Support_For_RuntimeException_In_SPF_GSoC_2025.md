@@ -8,9 +8,7 @@
   <img src="jpf.png" width="150">
 </div>
 
-<h3 align="center">THE JPF TEAM</h3>
-
----
+<h2 align="center">THE JPF TEAM</h2>
 
 <br>
 <br>
