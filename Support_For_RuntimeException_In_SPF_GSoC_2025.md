@@ -17,11 +17,6 @@
 - **Project Difficulty** - Medium
 - **Duration** - Jun' 2025 to Sept' 2025
 
-
-<br>
-The following report summarizes the work done during <a href="(https://summerofcode.withgoogle.com)" target="_blank">Google Summer of Code 2025</a> with the results, improved sv-comp scores, and future work. This also serves as the final project report with all the contributions made, current state of the project, and the challenges faced.
-
-<br>
 <br>
 <h2 align="center">Support Runtime Exceptions in SPF</h2>
 
