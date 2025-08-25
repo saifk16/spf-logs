@@ -56,6 +56,30 @@
 
 <h1>Support Runtime Exceptions in SPF</h1>
 
+This report presents the progress made on the project **Support Runtime Exceptions in SPF**, carried out under **The JPF Team (The Java Pathfinder Team)** , including improvements in **[SV-COMP](https://sv-comp.sosy-lab.org/2025/index.php)**
+ scores, an outline of future work, code contributions, and the challenges encountered. The project was done as a part of **[Google Summer of Code 2025](https://summerofcode.withgoogle.com/)**, where **The JPF Team** participated as an open-source mentoring organization.
+
+A set of quick links are provided below for easy reference.
+
+<table cellspacing="0" cellpadding="8" align="center">
+  <tr>
+    <td><b>Java Pathfinder</b></td>
+    <td><a href="https://github.com/javapathfinder/jpf-core/wiki/">Wiki</a></td>
+  </tr>
+  <tr>
+    <td><b>Symbolic Pathfinder</b></td>
+    <td><a href="https://github.com/SymbolicPathFinder/jpf-symbc/wiki">Wiki</a></td>
+  </tr>
+  <tr>
+    <td><b>SPF Article</b></td>
+    <td><a href="https://www.researchgate.net/publication/257522893_Symbolic_PathFinder_Integrating_symbolic_execution_with_model_checking_for_Java_bytecode_analysis">Symbolic PathFinder: Integrating symbolic execution with model checking for Java bytecode analysis</a></td>
+  </tr>
+  <tr>
+    <td><b>Code Repository</b></td>
+    <td><a href="https://github.com/saifk16/jpf-symbc">fork of jpf-symbc</a></td>
+  </tr>
+</table>
+
 <h2>Introduction</h2>
 
 **Java Pathfinder (JPF)** is a Java bytecode analysis tool mostly used for **[model checking](https://github.com/javapathfinder/jpf-core/wiki/Testing-vs.-Model-Checking)** written in Java. It does not execute a program like a normal JVM, it systematically explores all possible execution paths to check for errors, deadlocks, and unhandled exceptions. JPF was started as a model checker around 1999 and was developed at the NASA Ames Research Center. 
