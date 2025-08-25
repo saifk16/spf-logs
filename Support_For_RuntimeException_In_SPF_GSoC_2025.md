@@ -15,7 +15,7 @@
 
 <h1> Contributor Info </h1>
 
-<table border="1" cellspacing="0" cellpadding="8" align="center">
+<table cellspacing="0" cellpadding="8" align="center">
   <tr>
     <td><b>Contributor Name</b></td>
     <td>Saif Ali Khan</td>
