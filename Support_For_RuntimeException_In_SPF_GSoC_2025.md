@@ -1,24 +1,62 @@
 ![Google Summer of Code](GSoC_Logo.png)
----
+
+<br>
+
 <h1 align="center"> FINAL REPORT (GSoC 2025) </h1>
 
 <div align="center">
   <img src="jpf.png" width="150">
 </div>
 
-<h2 align="center">THE JPF TEAM</h2>
+<h3 align="center">THE JPF TEAM</h3>
 
-- **Contributor Name** - Saif Ali Khan
-- **GitHub** - [saifk16](https://github.com/saifk16)
-- **Email** - [saif7862254j@gmail.com](mailto:saif7862254j@gmail.com)
-- **Organization** - [The JPF Team](https://github.com/javapathfinder/jpf-core/wiki)
-- **Mentor** - Soha Hussein
-- **Project** - [Support Runtime Exceptions in SPF](https://github.com/javapathfinder/jpf-core/wiki/GSoC-2025-Project-Ideas#runtime-exception-in-spf)
-- **Project Difficulty** - Medium
-- **Duration** - Jun' 2025 to Sept' 2025
+---
 
 <br>
-<h2 align="center">Support Runtime Exceptions in SPF</h2>
+<br>
+
+## Contributor Info
+
+<table border="1" cellspacing="0" cellpadding="8" align="center">
+  <tr>
+    <td><b>Contributor Name</b></td>
+    <td>Saif Ali Khan</td>
+  </tr>
+  <tr>
+    <td><b>GitHub</b></td>
+    <td><a href="https://github.com/saifk16">saifk16</a></td>
+  </tr>
+  <tr>
+    <td><b>Email</b></td>
+    <td><a href="mailto:saif7862254j@gmail.com">saif7862254j@gmail.com</a></td>
+  </tr>
+  <tr>
+    <td><b>Organization</b></td>
+    <td><a href="https://github.com/javapathfinder/jpf-core/wiki">The JPF Team</a></td>
+  </tr>
+  <tr>
+    <td><b>Mentor</b></td>
+    <td>Soha Hussein</td>
+  </tr>
+  <tr>
+    <td><b>Project</b></td>
+    <td><a href="https://github.com/javapathfinder/jpf-core/wiki/GSoC-2025-Project-Ideas#runtime-exception-in-spf">Support Runtime Exceptions in SPF</a></td>
+  </tr>
+  <tr>
+    <td><b>Project Difficulty</b></td>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <td><b>Duration</b></td>
+    <td>Jun' 2025 to Sept' 2025</td>
+  </tr>
+</table>
+
+
+<br>
+<br>
+
+<h1>Support Runtime Exceptions in SPF</h1>
 
 <h3>Introduction</h3>
 
