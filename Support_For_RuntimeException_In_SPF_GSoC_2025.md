@@ -13,7 +13,7 @@
 <br>
 <br>
 
-## Contributor Info
+<h1> Contributor Info </h1>
 
 <table border="1" cellspacing="0" cellpadding="8" align="center">
   <tr>
