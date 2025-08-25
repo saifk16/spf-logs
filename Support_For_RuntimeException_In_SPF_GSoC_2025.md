@@ -11,7 +11,6 @@
 <h2 align="center">THE JPF TEAM</h2>
 
 <br>
-<br>
 
 <h1> Contributor Info </h1>
 
@@ -50,8 +49,6 @@
   </tr>
 </table>
 
-
-<br>
 <br>
 
 <h1>Support Runtime Exceptions in SPF</h1>
@@ -76,7 +73,7 @@ A set of quick links are provided below for easy reference.
   </tr>
   <tr>
     <td><b>Code Repository</b></td>
-    <td><a href="https://github.com/saifk16/jpf-symbc">fork of jpf-symbc</a></td>
+    <td><a href="https://github.com/saifk16/jpf-symbc">url</a></td>
   </tr>
 </table>
 
