@@ -56,7 +56,7 @@
 
 <h1>Support Runtime Exceptions in SPF</h1>
 
-<h3>Introduction</h3>
+<h2>Introduction</h2>
 
 **Java Pathfinder (JPF)** is a Java bytecode analysis tool mostly used for **[model checking](https://github.com/javapathfinder/jpf-core/wiki/Testing-vs.-Model-Checking)** written in Java. It does not execute a program like a normal JVM, it systematically explores all possible execution paths to check for errors, deadlocks, and unhandled exceptions. JPF was started as a model checker around 1999 and was developed at the NASA Ames Research Center. 
 
