@@ -112,12 +112,12 @@ The goal in this project was to add support for raising **runtime exceptions** l
   <tr>
     <td><b>NullPointerException</b></td>
     <td>contains(), equals(), startsWith(), endsWith(), isEmpty()</td>
-    <td>Raised when the symbolic string can be <code>null</code></td>
+    <td>See this section for details</td>
   </tr>
   <tr>
     <td><b>StringIndexOutOfBoundsException</b></td>
     <td>charAt(), subString(beginIndex), subString(beginIndex, endIndex)</td>
-    <td>Raised when index is &lt; 0 or &gt; string length</td>
+    <td>See this section for details</td>
   </tr>
   <tr>
     <td><b>NumberFormatException</b></td>
