@@ -32,8 +32,8 @@
     <td><a href="https://github.com/javapathfinder/jpf-core/wiki">The JPF Team</a></td>
   </tr>
   <tr>
-    <td><b>Mentor</b></td>
-    <td>Soha Hussein</td>
+    <td><b>Mentors</b></td>
+    <td>Soha Hussein, Yannic Nohller</td>
   </tr>
   <tr>
     <td><b>Project</b></td>
@@ -99,32 +99,52 @@ SPF relies on the *jpf-core* framework to systematically explore the different s
 
 <br>
 
-<h2>Project Goal</h2>
+<h2>Project Goals</h2>
 
-The goal in this project was to add support for raising **runtime exceptions** like `NullPointerException`, `StringIndexOutOfBoundsException`, `NumberFormatException`, etc. Some string methods were supported to raise these **runtime exceptions**. 
+The goal in this project was to add support for raising **runtime exceptions** like `NullPointerException`, `StringIndexOutOfBoundsException`, `NumberFormatException`, etc. Some string methods were supported to raise these **runtime exceptions**. They are listed below with the **runtime-exceptions** raised for them. 
 
-- ***NullPointerException*** - contains(), equals(), startsWith(), endsWith(), isEmpty()
-- ***StringIndexOutOfBounds*** - charAt(), subString(beginIndex), subString(beginIndex, endIndex)
+<table cellspacing="0" cellpadding="8" align="center">
+  <tr>
+    <th>Exception</th>
+    <th>Methods Supported</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td><b>NullPointerException</b></td>
+    <td>contains(), equals(), startsWith(), endsWith(), isEmpty()</td>
+    <td>Raised when the symbolic string can be <code>null</code></td>
+  </tr>
+  <tr>
+    <td><b>StringIndexOutOfBoundsException</b></td>
+    <td>charAt(), subString(beginIndex), subString(beginIndex, endIndex)</td>
+    <td>Raised when index is &lt; 0 or &gt; string length</td>
+  </tr>
+  <tr>
+    <td><b>NumberFormatException</b></td>
+    <td>---</td>
+    <td>See <a href="#">this section</a> for details</td>
+  </tr>
+</table>
 
-<p>
+
+<br>
 
 In addition, by incorporating this support, the project aimed to improve SPF’s performance on the **SV-COMP benchmarks** (runtime-exception set). The SV-COMP score increased significantly compared to earlier runs, for this, the same **runtime-exception benchmark set** was executed on three different SPF versions (zip files):
 
 - The Zenodo release,
 
-- The SV-COMP branch, and
+- The sv-comp branch of SPF, and
 
-- The enhanced GSoC 2025 version with runtime exception support.
+- The version with runtime exception support.
 
-This included refining the **SV-COMP script** to:
+<br>
 
-- Add a dedicated **runtime-exception mode** and **assertion mode**,
+This also includes refining the **SV-COMP script** to:
 
-- Configure SPF runs with the new option (**runtime.exception=true**), when we are in the runtime exception mode, and (**runtime.exception=false**), while in assertion mode.
+- Add dedicated **runtime-exception** and **assertion** modes,
 
 - Correctly classify benchmark results (SAFE, UNSAFE, UNKNOWN) for runtime exception properties.
 
-For ***NumberFormatException*** please see this [section.]()
 
 <br>
 <h3>Contributions</h3>
