@@ -121,7 +121,7 @@ The goal in this project was to add support for raising **runtime exceptions** l
   </tr>
   <tr>
     <td><b>NumberFormatException</b></td>
-    <td>---</td>
+    <td><span align="center">-----</span></td>
     <td>See <a href="#">this section</a> for details</td>
   </tr>
 </table>
@@ -150,7 +150,7 @@ In addition, by incorporating this support, the project aimed to improve SPF’s
   <tr>
     <td>Runtime Exception Support Version</td>
     <td>spf3.zip</td>
-    <td>----</td>
+    <td><span align="center">-----</span></td>
   </tr>
 </table>
 
