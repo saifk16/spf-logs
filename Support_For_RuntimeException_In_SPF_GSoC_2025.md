@@ -121,11 +121,10 @@ The goal in this project was to add support for raising **runtime exceptions** l
   </tr>
   <tr>
     <td><b>NumberFormatException</b></td>
-    <td><div align="center">-----</div></td>
+    <td><div align="center">----------</div></td>
     <td>See <a href="#">this section</a> for details</td>
   </tr>
 </table>
-
 
 <br>
 
@@ -154,7 +153,6 @@ In addition, by incorporating this support, the project aimed to improve SPF’s
   </tr>
 </table>
 
-
 <br>
 
 This also includes refining the **SV-COMP script** to:
@@ -163,8 +161,13 @@ This also includes refining the **SV-COMP script** to:
 
 - Correctly classify benchmark results (SAFE, UNSAFE, UNKNOWN) for runtime exception properties.
 
+- Add correct config options, like the listener to be used and different scenarios according to the mode you will running.
+
+The results are listed below
+
 
 <br>
+
 <h3>Contributions</h3>
 
 All the code I have contributed can be found at [this url](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler).
