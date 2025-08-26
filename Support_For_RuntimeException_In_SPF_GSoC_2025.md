@@ -133,24 +133,24 @@ In addition, by incorporating this support, the project aimed to improve SPF’s
 
 <table align="center" cellspacing="0" cellpadding="6">
   <tr>
+    <th>Taken From</th>
     <th>Version</th>
-    <th>Local ZIP filename</th>
     <th>Source Link</th>
   </tr>
   <tr>
     <td>Zenodo Release</td>
-    <td><a href="spf-zenodo-release.zip">spf-zenodo-release.zip</a></td>
-    <td><a href="https://zenodo.org/record/XXXXX" target="_blank">Zenodo Record</a></td>
+    <td>spf1.zip</td>
+    <td><a href="https://zenodo.org/records/10407521" target="_blank">Zenodo Record</a></td>
   </tr>
   <tr>
     <td>SV-COMP Branch of SPF</td>
-    <td><a href="spf-svcomp.zip">spf-svcomp.zip</a></td>
-    <td><a href="https://github.com/SymbolicPathFinder/jpf-spf/tree/sv-comp" target="_blank">GitHub Branch</a></td>
+    <td>spf2.zip</td>
+    <td><a href="https://github.com/SymbolicPathFinder/jpf-symbc/tree/sv-comp" target="_blank">GitHub Branch</a></td>
   </tr>
   <tr>
     <td>Runtime Exception Support Version</td>
-    <td><a href="spf-runtime-exceptions.zip">spf-runtime-exceptions.zip</a></td>
-    <td><a href="https://github.com/SymbolicPathFinder/jpf-spf/tree/runtime-exceptions" target="_blank">GitHub Branch</a></td>
+    <td>spf3.zip</td>
+    <td>----</td>
   </tr>
 </table>
 
