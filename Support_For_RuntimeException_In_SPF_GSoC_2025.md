@@ -131,11 +131,29 @@ The goal in this project was to add support for raising **runtime exceptions** l
 
 In addition, by incorporating this support, the project aimed to improve SPF’s performance on the **SV-COMP benchmarks** (runtime-exception set). The SV-COMP score increased significantly compared to earlier runs, for this, the same **runtime-exception benchmark set** was executed on three different SPF versions (zip files):
 
-- The Zenodo release,
+<table align="center" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Version</th>
+    <th>Local ZIP filename</th>
+    <th>Source Link</th>
+  </tr>
+  <tr>
+    <td>Zenodo Release</td>
+    <td><a href="spf-zenodo-release.zip">spf-zenodo-release.zip</a></td>
+    <td><a href="https://zenodo.org/record/XXXXX" target="_blank">Zenodo Record</a></td>
+  </tr>
+  <tr>
+    <td>SV-COMP Branch of SPF</td>
+    <td><a href="spf-svcomp.zip">spf-svcomp.zip</a></td>
+    <td><a href="https://github.com/SymbolicPathFinder/jpf-spf/tree/sv-comp" target="_blank">GitHub Branch</a></td>
+  </tr>
+  <tr>
+    <td>Runtime Exception Support Version</td>
+    <td><a href="spf-runtime-exceptions.zip">spf-runtime-exceptions.zip</a></td>
+    <td><a href="https://github.com/SymbolicPathFinder/jpf-spf/tree/runtime-exceptions" target="_blank">GitHub Branch</a></td>
+  </tr>
+</table>
 
-- The sv-comp branch of SPF, and
-
-- The version with runtime exception support.
 
 <br>
 
