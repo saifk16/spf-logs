@@ -98,9 +98,33 @@ SPF relies on the *jpf-core* framework to systematically explore the different s
 - [jpf-symbc](https://github.com/SymbolicPathFinder/jpf-symbc) - The jpf-symbc project constitutes SPF, a JPF extension.
 
 <br>
-<h3>Project Goal</h3>
 
-In this project support for throwing **runtime exceptions** like `NullPointerException` and `StringIndexOutOfBoundsException` were added, for some string functions like **contains()**, **startsWith()**, **endsWith()**, **equals()**, **isEmpty()**, **subString()** and **charAt()** also the score of SPF on sv-benchmarks ([sv-comp](https://sv-comp.sosy-lab.org/)) was not good, the score also got improved because of the support that was done in this project.
+<h2>Project Goal</h2>
+
+The goal in this project was to add support for raising **runtime exceptions** like `NullPointerException`, `StringIndexOutOfBoundsException`, `NumberFormatException`, etc. Some string methods were supported to raise these **runtime exceptions**. 
+
+- ***NullPointerException*** - contains(), equals(), startsWith(), endsWith(), isEmpty()
+- ***StringIndexOutOfBounds*** - charAt(), subString(beginIndex), subString(beginIndex, endIndex)
+
+<p>
+
+In addition, by incorporating this support, the project aimed to improve SPF’s performance on the **SV-COMP benchmarks** (runtime-exception set). The SV-COMP score increased significantly compared to earlier runs, for this, the same **runtime-exception benchmark set** was executed on three different SPF versions (zip files):
+
+- The Zenodo release,
+
+- The SV-COMP branch, and
+
+- The enhanced GSoC 2025 version with runtime exception support.
+
+This included refining the **SV-COMP script** to:
+
+- Add a dedicated **runtime-exception mode** and **assertion mode**,
+
+- Configure SPF runs with the new option (**runtime.exception=true**), when we are in the runtime exception mode, and (**runtime.exception=false**), while in assertion mode.
+
+- Correctly classify benchmark results (SAFE, UNSAFE, UNKNOWN) for runtime exception properties.
+
+For ***NumberFormatException*** please see this [section.]()
 
 <br>
 <h3>Contributions</h3>
