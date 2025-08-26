@@ -155,9 +155,12 @@ In addition, by incorporating this support, the project aimed to improve SPF’s
 
 <br>
 
-This also includes refining the **[SV-COMP script](https://github.com/saifk16/jpf-symbc/blob/handler-1/jpf-sv-comp)** to add dedicated **runtime-exception** and **assertion** modes, correctly classify benchmark results (SAFE, UNSAFE, UNKNOWN) for runtime exception properties and add correct config options, like the listener to be used and different scenarios according to the mode you will running.
+This also includes refining the **[SV-COMP script](https://github.com/saifk16/jpf-symbc/blob/handler-1/jpf-sv-comp)** to add dedicated **runtime-exception** and **assertion** modes, correctly classify benchmark results (*SAFE*, *UNSAFE*, *UNKNOWN*) to print in the output or logs and add correct config options, like the listener to be used and different scenarios according to the mode you will running.
 
-The results are listed below
+A detailed comparison of results before and after adding runtime-exception support, along with reachsafety, is provided in the Results section below.
+
+> [!NOTE]
+> For more information please go to [README.md](README.md) 
 
 
 <br>
