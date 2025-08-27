@@ -83,8 +83,8 @@ A set of quick links are provided below for easy reference. For more information
   <td><b>Pull Requests</b></td>
   <td>
     <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/111">
-    </a> (Merged), 
-    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">#120</a> (Under Review)
+    &#35;111</a> (Merged), 
+    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">&#35;120</a> (Under Review)
   </td>
 </tr>
 </table>
