@@ -245,8 +245,6 @@ This section summarizes the improvements achieved by adding *runtime exception s
             </tbody>
         </table>
     </div>
-
-    <!-- ReachSafety Table -->
     <div style="flex: 1; min-width: 400px;">
         <h3>ReachSafety</h3>
         <table align="center">
