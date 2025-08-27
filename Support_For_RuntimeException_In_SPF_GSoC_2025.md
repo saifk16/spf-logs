@@ -298,7 +298,7 @@ The addition of **Z3str3** significantly improved the ability to handle string-r
 Link to execution logs for detailed proof of result causes:
 
 - SPF-1.0 - [reachsafety](logs/SPF-1.0/reachsafety/) | [runtime-exception](logs/SPF-1.0/runtime/)
-- SPF-2.0 - [reachsafety](logs/SPF-2.0/Date-26Aug/) | [runtime-exception]()
+- SPF-2.0 - [reachsafety](logs/SPF-2.0/Date-26Aug/reachsafety/) | [runtime-exception](logs/SPF-2.0/Date-26Aug/runtime-exception/)
 The SV-COMP evaluation script used for these benchmarks can be found [here - link to SV-COMP script].
 
 
