@@ -268,6 +268,8 @@ The results demonstrate a significant improvement in SPF's performance with the 
 > [!NOTE]
 > A new **runtime-exception** branch was created as a copy of the **sv-comp branch**, maintaining the same codebase with no differences. The improvements seen are purely due to the runtime exception handling additions.
 
+<br>
+
 The improvements are visible in the overall score, which increased from `-3906` to `910` max being `1327`. This substantial change can be attributed to several key factors:
 
 - **Dramatic reduction in incorrect results:** The incorrect results dropped from `278` to just `2`, with *incorrect false* being dropped from `278` to `0`.
@@ -277,6 +279,8 @@ The improvements are visible in the overall score, which increased from `-3906` 
 ```bash
 echo "symbolic.string_dp=z3str3" >> $DIR/config.jpf
 ```
+
+<br>
 
 ***[Z3 SMT Solver](https://www.microsoft.com/en-us/research/project/z3-3/)*** – A high-performance **satisfiability modulo theories solver** that supports reasoning across domains like integers, reals, bit-vectors, arrays, and strings.
 
