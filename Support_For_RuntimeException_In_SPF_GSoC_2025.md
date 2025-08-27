@@ -168,6 +168,64 @@ A detailed comparison of results before and after adding runtime-exception suppo
 
 This section summarizes the improvements achieved by adding *runtime exception support* in SPF. The evaluation was conducted on the **SV-COMP Runtime Exception benchmark set** as well as the **ReachSafety benchmark set**. Please see [this](https://gitlab.com/sosy-lab/sv-comp/bench-defs/-/blob/main/benchmark-defs/spf.xml?ref_type=heads) and [this](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/blob/main/java/ReachSafety-Java.set?ref_type=heads).
 
+<h3>RuntimeException</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Run</th>
+      <th>Total Files</th>
+      <th>Correct</th>
+      <th>Correct True</th>
+      <th>Correct False</th>
+      <th>Incorrect</th>
+      <th>Incorrect True</th>
+      <th>Incorrect False</th>
+      <th>Unknown</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SPF-1.0</td>
+      <td>673</td>
+      <td>167</td>
+      <td>159</td>
+      <td>8</td>
+      <td>242</td>
+      <td>0</td>
+      <td>242</td>
+      <td>264</td>
+      <td>-3546 (Max: 1327)</td>
+    </tr>
+    <tr>
+      <td>SPF-2.0</td>
+      <td>673</td>
+      <td>275</td>
+      <td>267</td>
+      <td>8</td>
+      <td>278</td>
+      <td>0</td>
+      <td>278</td>
+      <td>120</td>
+      <td>-3906 (Max: 1327)</td>
+    </tr>
+    <tr>
+      <td>SPF-3.0</td>
+      <td>673</td>
+      <td>492</td>
+      <td>482</td>
+      <td>10</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>179</td>
+      <td>910 (Max: 1327)</td>
+    </tr>
+  </tbody>
+</table>
+
+
 <br>
 
 <h3>Contributions</h3>
