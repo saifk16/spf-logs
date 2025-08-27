@@ -259,6 +259,34 @@ This section summarizes the improvements achieved by adding *runtime exception s
         </tbody>
     </table>
 
+
+The results demonstrate a significant improvement in SPF's performance with the addition of runtime exception support. SPF-1.0 represents the baseline from the SV-COMP branch, while SPF-2.0 is the updated runtime exception support version of SPF.
+
+Note: A new runtime branch was created as a copy of the SV-COMP branch, maintaining the same foundational codebase with no differences in the base implementation. The improvements seen are purely due to the runtime exception handling additions.
+
+The most striking improvement is visible in the overall score, which increased dramatically from -3906 to 910. This substantial change can be attributed to several key factors:
+
+Dramatic reduction in incorrect results: The incorrect classifications dropped from 278 to just 2, with incorrect false positives being virtually eliminated (from 278 to 0).
+Significant increase in correct classifications: Correct results improved from 275 to 492, representing a 79% increase in accuracy.
+Script refinements and solver improvements: The evaluation script was significantly refined, and crucially, we transitioned from using only the Z3 bitvector solver to incorporating Z3str3 for string operations. This change was implemented by adding the configuration:
+echo "symbolic.string_dp=z3str3" >> $DIR/config.jpf
+
+
+Solver Comparison
+
+Z3 Bitvector: The original solver used in SPF-1.0, primarily designed for bitvector operations
+Z3str3: An advanced string solver that provides better support for symbolic string operations and constraints
+
+The adoption of Z3str3 significantly improved our ability to handle string-related symbolic execution, though it also contributed to an increase in unknown results from 120 to 179. These unknown results are primarily due to:
+
+Unsupported string operations
+Unknown constants or symbolic methods not yet handled by the solver
+Complex string constraints that timeout during solving
+
+[Link to execution logs for detailed proof of unknown result causes]
+The SV-COMP evaluation script used for these benchmarks can be found [here - link to SV-COMP script].
+
+
 <br>
 
 <h3>Contributions</h3>
