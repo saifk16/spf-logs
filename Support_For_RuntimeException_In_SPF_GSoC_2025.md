@@ -278,11 +278,11 @@ The improvements are visible in the overall score, which increased from `-3906` 
 echo "symbolic.string_dp=z3str3" >> $DIR/config.jpf
 ```
 
-Z3 SMT Solver – A high-performance satisfiability modulo theories solver that supports reasoning across domains like integers, reals, bit-vectors, arrays, and strings.
+***[Z3 SMT Solver](https://www.microsoft.com/en-us/research/project/z3-3/)*** – A high-performance **satisfiability modulo theories solver** that supports reasoning across domains like integers, reals, bit-vectors, arrays, and strings.
 
-Z3BitVector – Theory for bit-precise reasoning over fixed-width integers, supporting arithmetic and bitwise operations; widely used in program verification and symbolic execution.
+***Z3BitVector*** – Solver for bit-precise reasoning over fixed-width integers.
 
-Z3str3 – Theory for reasoning about strings and regular expressions, supporting concatenation, substring, length, and regex constraints; useful for analyzing text-processing code and input validation.
+***Z3str3*** – Solver for reasoning about strings and regular expressions, supporting concatenation, substring, length, and regex constraints.
 
 The adoption of Z3str3 significantly improved our ability to handle string-related symbolic execution, though it also contributed to an increase in unknown results from 120 to 179. These unknown results are primarily due to:
 
