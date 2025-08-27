@@ -79,6 +79,18 @@ A set of quick links are provided below for easy reference. For more information
     <td><b>19 False Verdict Verification Tasks (Runtime Exception Set)</b></td>
     <td><a href="https://docs.google.com/spreadsheets/d/1yb73SzwV9_r5G7EP_iMi_xpUM_o7eOQkojBOJFN9LvY/edit?usp=sharing">Spread Sheet URL</a></td>
   </tr>
+<tr>
+  <td><b>Pull Requests</b></td>
+  <td>
+    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/111">
+      #111 
+      <span style="background-color:#8957e5; color:white; padding:2px 2px; text-align:center; border-radius:3px; font-size:12px;">
+        Merged
+      </span>
+    </a>, 
+    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">#120</a>
+  </td>
+</tr>
 </table>
 
 <br>
@@ -178,7 +190,7 @@ This section summarizes the improvements achieved by adding *runtime exception s
         <tr>
             <th>SPF-1.0</th>
             <th>SPF-2.0</th>
-            <th border="1">SPF-3.0</th>
+            <th>SPF-3.0</th>
             <th>SPF-1.0</th>
             <th>SPF-2.0</th>
             <th>SPF-3.0</th>
