@@ -174,92 +174,92 @@ This section summarizes the improvements achieved by adding *runtime exception s
 <br>
 
 <table align="center">
-        <thead>
-            <tr>
-                <th rowspan="2">Metric</th>
-                <th colspan="2">RuntimeException</th>
-                <th colspan="2">ReachSafety</th>
-            </tr>
-            <tr>
-                <th>SPF-1.0</th>
-                <th>SPF-2.0</th>
-                <th>SPF-1.0</th>
-                <th>SPF-2.0</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Total Files</strong></td>
-                <td>673</td>
-                <td>673</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td><strong>Correct</strong></td>
-                <td>275</td>
-                <td>492</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td><strong>Correct True</strong></td>
-                <td>267</td>
-                <td>482</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td><strong>Correct False</strong></td>
-                <td>8</td>
-                <td>10</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td><strong>Incorrect</strong></td>
-                <td>278</td>
-                <td>2</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td><strong>Incorrect True</strong></td>
-                <td>0</td>
-                <td>2</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td><strong>Incorrect False</strong></td>
-                <td>278</td>
-                <td>0</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td><strong>Unknown</strong></td>
-                <td>120</td>
-                <td>179</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td><strong>Score</strong></td>
-                <td>-3906</td>
-                <td>910</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td><strong>Max Score</strong></td>
-                <td>1327</td>
-                <td>1327</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-        </tbody>
-    </table>
+    <thead>
+        <tr>
+            <th rowspan="2">Metric</th>
+            <th colspan="2">RuntimeException</th>
+            <th colspan="2">ReachSafety</th>
+        </tr>
+        <tr>
+            <th>SPF-1.0</th>
+            <th>SPF-2.0</th>
+            <th>SPF-1.0</th>
+            <th>SPF-2.0</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Total Files</strong></td>
+            <td>673</td>
+            <td>673</td>
+            <td>674</td>
+            <td>674</td>
+        </tr>
+        <tr>
+            <td><strong>Correct</strong></td>
+            <td>275</td>
+            <td>492</td>
+            <td>508</td>
+            <td>462</td>
+        </tr>
+        <tr>
+            <td><strong>Correct True</strong></td>
+            <td>267</td>
+            <td>482</td>
+            <td>230</td>
+            <td>215</td>
+        </tr>
+        <tr>
+            <td><strong>Correct False</strong></td>
+            <td>8</td>
+            <td>10</td>
+            <td>278</td>
+            <td>247</td>
+        </tr>
+        <tr>
+            <td><strong>Incorrect</strong></td>
+            <td>278</td>
+            <td>2</td>
+            <td>46</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td><strong>Incorrect True</strong></td>
+            <td>0</td>
+            <td>2</td>
+            <td>38</td>
+            <td>38</td>
+        </tr>
+        <tr>
+            <td><strong>Incorrect False</strong></td>
+            <td>278</td>
+            <td>0</td>
+            <td>8</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><strong>Unknown</strong></td>
+            <td>120</td>
+            <td>179</td>
+            <td>120</td>
+            <td>172</td>
+        </tr>
+        <tr>
+            <td><strong>Score</strong></td>
+            <td>-3906</td>
+            <td>910</td>
+            <td>-606</td>
+            <td>-571</td>
+        </tr>
+        <tr>
+            <td><strong>Max Score</strong></td>
+            <td>1327</td>
+            <td>1327</td>
+            <td>927</td>
+            <td>927</td>
+        </tr>
+    </tbody>
+</table>
 
 <br>
 
@@ -292,6 +292,8 @@ The addition of **Z3str3** significantly improved the ability to handle string-r
 
 - Unsupported string operations
 - Unknown constants or symbolic methods that are not yet handled.
+
+For the **ReachSafety** benchmarks, you can observe slight improvements in the results, with the score improving from `-606` to `-571` and a small reduction in incorrect results from `46` to `40`, unknowns from `120` to `172`. These modest changes are primarily attributed to the same script refinements and solver improvements (Z3str3 addition) mentioned above, rather than any runtime exception support additions. These benchmarks focus purely on assertion-based reachability analysis. The improvements seen here are solely due to the enhanced evaluation infrastructure and solver capabilities.
 
 <br>
 
