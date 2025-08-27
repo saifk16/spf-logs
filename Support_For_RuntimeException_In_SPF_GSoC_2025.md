@@ -310,12 +310,11 @@ The evaluation covers two distinct benchmark categories, each targeting differen
 
 <br>
 
-It's worth noting that the **SV-COMP** community and **SOSY-Labs** developers have intentionally made their benchmarks to avoid *null pointer exception detection* scenarios. This design choice reflects their focus on other types of program verifications. As an evidence, the verification methods typically ensure that `Verifier.nondetString()` never returns null, as documented in [issue &#35;1438](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/issues/1438).
-
+It's worth noting that the **SV-COMP** community and **SOSY-Labs** developers have intentionally made their benchmarks to avoid *null pointer exception detection* scenarios. As an evidence, the verification methods typically ensure that `Verifier.nondetString()` never returns null, as documented in [issue &#35;1438](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/issues/1438).
 
 <br>
 
-<h3>Contributions</h3>
+<h2>Contributions</h2>
 
 All the code I have contributed can be found at [this url](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler).
 
