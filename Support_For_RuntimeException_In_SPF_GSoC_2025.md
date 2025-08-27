@@ -170,7 +170,78 @@ This section summarizes the improvements achieved by adding *runtime exception s
 
 <h3>RuntimeException</h3>
 
-<iframe src="table.html" width="100%" height="400"></iframe>
+<table align="center">
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>Run 1</th>
+            <th>Run 2</th>
+            <th>Run 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="metric">Total Files</td>
+            <td>673</td>
+            <td>673</td>
+            <td>673</td>
+        </tr>
+        <tr>
+            <td class="metric">Correct</td>
+            <td>167</td>
+            <td>275</td>
+            <td>492</td>
+        </tr>
+        <tr>
+            <td class="metric">Correct True</td>
+            <td>159</td>
+            <td>267</td>
+            <td>482</td>
+        </tr>
+        <tr>
+            <td class="metric">Correct False</td>
+            <td>8</td>
+            <td>8</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td class="metric">Incorrect</td>
+            <td>242</td>
+            <td>278</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td class="metric">Incorrect True</td>
+            <td>0</td>
+            <td>0</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td class="metric">Incorrect False</td>
+            <td>242</td>
+            <td>278</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td class="metric">Unknown</td>
+            <td>264</td>
+            <td>120</td>
+            <td>179</td>
+        </tr>
+        <tr>
+            <td class="metric">Score</td>
+            <td class="negative-score">-3546</td>
+            <td class="negative-score">-3906</td>
+            <td class="positive-score">910</td>
+        </tr>
+        <tr>
+            <td class="metric">Max Score</td>
+            <td>1327</td>
+            <td>1327</td>
+            <td>1327</td>
+        </tr>
+    </tbody>
+</table>
 
 <br>
 
