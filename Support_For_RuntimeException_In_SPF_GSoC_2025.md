@@ -84,8 +84,8 @@ A set of quick links are provided below for easy reference. For more information
   <td>
     <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/111">
         #111 
-    </a> <img src="https://img.shields.io/badge/Merged-8A2BE2">, 
-    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">#120</a>
+    </a> Merged, 
+    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">#120</a> Open
   </td>
 </tr>
 </table>
