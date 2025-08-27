@@ -263,22 +263,26 @@ This section summarizes the improvements achieved by adding *runtime exception s
 
 <br>
 
-The results demonstrate a significant improvement in SPF's performance with the addition of runtime exception support. SPF-1.0 represents the baseline from the SV-COMP branch, while SPF-2.0 is the updated runtime exception support version of SPF.
+The results demonstrate a significant improvement in SPF's performance with the addition of **runtime exception support**. *SPF-1.0* represents the baseline from the **sv-comp branch**, while *SPF-2.0* is the updated runtime exception support version of SPF.
 
-Note: A new runtime branch was created as a copy of the SV-COMP branch, maintaining the same foundational codebase with no differences in the base implementation. The improvements seen are purely due to the runtime exception handling additions.
+> [!NOTE]
+> A new **runtime-exception** branch was created as a copy of the **sv-comp branch**, maintaining the same codebase with no differences. The improvements seen are purely due to the runtime exception handling additions.
 
-The most striking improvement is visible in the overall score, which increased dramatically from -3906 to 910. This substantial change can be attributed to several key factors:
+The improvements are visible in the overall score, which increased from `-3906` to `910` max being `1327`. This substantial change can be attributed to several key factors:
 
-Dramatic reduction in incorrect results: The incorrect classifications dropped from 278 to just 2, with incorrect false positives being virtually eliminated (from 278 to 0).
-Significant increase in correct classifications: Correct results improved from 275 to 492, representing a 79% increase in accuracy.
-Script refinements and solver improvements: The evaluation script was significantly refined, and crucially, we transitioned from using only the Z3 bitvector solver to incorporating Z3str3 for string operations. This change was implemented by adding the configuration:
+- **Dramatic reduction in incorrect results:** The incorrect results dropped from `278` to just `2`, with *incorrect false* being dropped from `278` to `0`.
+- **Significant increase in correct classifications:** Correct results improved from `275` to `492`.
+- **Script refinements and solver improvements:** The sv-comp script was significantly refined, and crucially, we not only used the **Z3 bitvector solver** but also the **Z3str3** for string operations. This change was implemented by adding the configuration:
+
+```bash
 echo "symbolic.string_dp=z3str3" >> $DIR/config.jpf
+```
 
+Z3 SMT Solver – A high-performance satisfiability modulo theories solver that supports reasoning across domains like integers, reals, bit-vectors, arrays, and strings.
 
-Solver Comparison
+Z3BitVector – Theory for bit-precise reasoning over fixed-width integers, supporting arithmetic and bitwise operations; widely used in program verification and symbolic execution.
 
-Z3 Bitvector: The original solver used in SPF-1.0, primarily designed for bitvector operations
-Z3str3: An advanced string solver that provides better support for symbolic string operations and constraints
+Z3str3 – Theory for reasoning about strings and regular expressions, supporting concatenation, substring, length, and regex constraints; useful for analyzing text-processing code and input validation.
 
 The adoption of Z3str3 significantly improved our ability to handle string-related symbolic execution, though it also contributed to an increase in unknown results from 120 to 179. These unknown results are primarily due to:
 
