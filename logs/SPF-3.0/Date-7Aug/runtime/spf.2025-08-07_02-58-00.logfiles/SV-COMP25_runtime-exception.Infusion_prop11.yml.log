@@ -1,0 +1,456 @@
+./jpf-sv-comp --propertyfile ../../sv-benchmarks/java/properties/runtime-exception.prp ../../sv-benchmarks/java/common ../../sv-benchmarks/java/java-ranger-regression/infusion/impl ../../sv-benchmarks/java/java-ranger-regression/infusion/prop11
+
+
+--------------------------------------------------------------------------------
+
+
+PROP_FILE=../../sv-benchmarks/java/properties/runtime-exception.prp
+CHECK(init(Main.main()), LTL(G ! uncaught(java.lang.RuntimeException)))
+ASSERTION_MODE=FALSE
+RUNTIME_EXCEPTION_MODE=TRUE
+/tmp/jpf-benchmark.o2k6Hf/config.jpf
+LD_LIBRARY_PATH=/home/f8/Desktop/bench-defs/bin/spf-2Fi5DX82Mr/jpf-symbc/lib:/home/f8/Desktop/SPF/jpf-symbc/lib:
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev a9cfdfd20e921dacd2aaa6e92103681eb28cc81d) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 7/8/25 3:04 AM
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  0)
+(define-fun int29 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  0)
+(define-fun int29 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  0)
+(define-fun int29 () Int  0)
+(define-fun int30 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  0)
+(define-fun int29 () Int  0)
+(define-fun int30 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  0)
+(define-fun int29 () Int  0)
+(define-fun int30 () Int  0)
+(define-fun int31 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  0)
+(define-fun int29 () Int  0)
+(define-fun int30 () Int  0)
+(define-fun int31 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  0)
+(define-fun int29 () Int  0)
+(define-fun int30 () Int  0)
+(define-fun int31 () Int  0)
+(define-fun int32 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  0)
+(define-fun int29 () Int  0)
+(define-fun int30 () Int  0)
+(define-fun int31 () Int  0)
+(define-fun int32 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  0)
+(define-fun int29 () Int  0)
+(define-fun int30 () Int  0)
+(define-fun int31 () Int  0)
+(define-fun int32 () Int  0)
+(define-fun int34 () Int  (- 1))
+*************************************
+Satisfiable: true
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int21 () Int  0)
+(define-fun int22 () Int  0)
+(define-fun int23 () Int  0)
+(define-fun int24 () Int  0)
+(define-fun int25 () Int  0)
+(define-fun int26 () Int  0)
+(define-fun int27 () Int  0)
+(define-fun int28 () Int  0)
+(define-fun int29 () Int  0)
+(define-fun int30 () Int  0)
+(define-fun int31 () Int  0)
+(define-fun int32 () Int  0)
+(define-fun int34 () Int  0)
+*************************************
+Satisfiable: true
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:26)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+
+====================================================== Method Summaries
+
+====================================================== Method Summaries (HTML)
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:01
+states:             new=25,visited=0,backtracked=25,end=12
+search:             maxDepth=13,constraints=2
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=12
+heap:               new=736,released=464,maxLive=500,gcCycles=25
+instructions:       8129
+max memory:         44MB
+loaded code:        classes=95,methods=1851
+
+====================================================== search finished: 7/8/25 3:04 AM
+SAFE
