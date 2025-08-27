@@ -178,7 +178,7 @@ This section summarizes the improvements achieved by adding *runtime exception s
         <tr>
             <th>SPF-1.0</th>
             <th>SPF-2.0</th>
-            <th>SPF-3.0</th>
+            <th border="1">SPF-3.0</th>
             <th>SPF-1.0</th>
             <th>SPF-2.0</th>
             <th>SPF-3.0</th>
