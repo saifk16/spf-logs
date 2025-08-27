@@ -171,6 +171,8 @@ A detailed comparison of results before and after adding runtime-exception suppo
 
 This section summarizes the improvements achieved by adding *runtime exception support* in SPF. The evaluation was conducted on the **SV-COMP Runtime Exception benchmark set** as well as the **ReachSafety benchmark set**. Please see [this](https://gitlab.com/sosy-lab/sv-comp/bench-defs/-/blob/main/benchmark-defs/spf.xml?ref_type=heads) and [this](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/blob/main/java/ReachSafety-Java.set?ref_type=heads).
 
+<br>
+
 <table align="center">
         <thead>
             <tr>
@@ -259,6 +261,7 @@ This section summarizes the improvements achieved by adding *runtime exception s
         </tbody>
     </table>
 
+<br>
 
 The results demonstrate a significant improvement in SPF's performance with the addition of runtime exception support. SPF-1.0 represents the baseline from the SV-COMP branch, while SPF-2.0 is the updated runtime exception support version of SPF.
 
