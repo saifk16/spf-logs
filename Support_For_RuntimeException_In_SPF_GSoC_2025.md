@@ -174,9 +174,9 @@ This section summarizes the improvements achieved by adding *runtime exception s
     <thead>
         <tr>
             <th>Metric</th>
-            <th>Run 1</th>
-            <th>Run 2</th>
-            <th>Run 3</th>
+            <th>SPF-1.0</th>
+            <th>SPF-2.0</th>
+            <th>SPF-3.0</th>
         </tr>
     </thead>
     <tbody>
