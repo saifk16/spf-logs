@@ -274,7 +274,7 @@ The improvements are visible in the overall score, which increased from `-3906` 
 
 - **Dramatic reduction in incorrect results:** The incorrect results dropped from `278` to just `2`, with *incorrect false* being dropped from `278` to `0`.
 - **Significant increase in correct classifications:** Correct results improved from `275` to `492`.
-- **Script refinements and solver improvements:** The sv-comp script was significantly refined, and crucially, we not only used the **Z3 bitvector solver** but also the **Z3str3** for string operations. This change was implemented by adding the configuration:
+- **Script refinements and solver improvements:** The sv-comp script was significantly refined, and crucially, we not only used the **Z3 bitvector solver** but also the **Z3str3** for string operations (solving). This change was implemented by adding the configuration:
 
 ```bash
 echo "symbolic.string_dp=z3str3" >> $DIR/config.jpf
@@ -284,17 +284,21 @@ echo "symbolic.string_dp=z3str3" >> $DIR/config.jpf
 
 ***[Z3 SMT Solver](https://www.microsoft.com/en-us/research/project/z3-3/)*** – A high-performance **satisfiability modulo theories solver** that supports reasoning across domains like integers, reals, bit-vectors, arrays, and strings.
 
-- ***Z3BitVector*** – Solver for bit-precise reasoning over fixed-width integers.
+- ***Z3bitvector*** – Solver for bit-precise reasoning over fixed-width integers.
 
 - ***Z3str3*** – Solver for reasoning about strings and regular expressions, supporting concatenation, substring, length, and regex constraints.
 
-The adoption of Z3str3 significantly improved our ability to handle string-related symbolic execution, though it also contributed to an increase in unknown results from 120 to 179. These unknown results are primarily due to:
+The addition of **Z3str3** significantly improved the ability to handle string-related symbolic execution, though it also increased **unknown results** from `120` to `179`. These unknown results are primarily due to:
 
-Unsupported string operations
-Unknown constants or symbolic methods not yet handled by the solver
-Complex string constraints that timeout during solving
+- Unsupported string operations
+- Unknown constants or symbolic methods that are not yet handled.
 
-[Link to execution logs for detailed proof of unknown result causes]
+<br>
+
+Link to execution logs for detailed proof of result causes:
+
+- SPF-1.0 - [reachsafety](logs/SPF-1.0/reachsafety/) | [runtime-exception](logs/SPF-1.0/runtime/)
+- SPF-2.0 - [reachsafety](logs/SPF-2.0/Date-26Aug/) | [runtime-exception]()
 The SV-COMP evaluation script used for these benchmarks can be found [here - link to SV-COMP script].
 
 
