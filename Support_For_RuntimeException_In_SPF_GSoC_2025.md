@@ -293,7 +293,7 @@ The addition of **Z3str3** significantly improved the ability to handle string-r
 - Unsupported string operations
 - Unknown constants or symbolic methods that are not yet handled.
 
-For the **ReachSafety** benchmarks, you can observe slight improvements in the results, with the score improving from `-606` to `-571` and a small reduction in incorrect results from `46` to `40`, unknowns from `120` to `172`. These modest changes are primarily attributed to the same script refinements and solver improvements (Z3str3 addition) mentioned above, rather than any runtime exception support additions. These benchmarks focus purely on assertion-based reachability analysis. The improvements seen here are solely due to the enhanced evaluation infrastructure and solver capabilities.
+For the **ReachSafety** benchmarks, you can observe slight improvements in the results, with the score improving from `-606` to `-571` and a small reduction in incorrect results from `46` to `40`, unknowns from `120` to `172`. These modest changes are primarily attributed to the same script refinements and solver improvements (Z3str3 addition) mentioned above, rather than any runtime exception support additions. These benchmarks focus purely on assertion-based reachability analysis.
 
 <br>
 
@@ -318,13 +318,16 @@ It's worth noting that the **SV-COMP** community and **SOSY-Labs** developers ha
 
 <h2>Contributions</h2>
 
-All the code I have contributed can be found at [this url](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler).
+All the code I have contributed can be found at these url's, [compare](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler), [PR &#35;111](https://github.com/SymbolicPathFinder/jpf-symbc/pull/111), [PR &#35;120](https://github.com/SymbolicPathFinder/jpf-symbc/pull/120), [code repo](https://github.com/saifk16/jpf-symbc), [handler-1 branch](https://github.com/saifk16/jpf-symbc/compare/handler...saifk16:jpf-symbc:handler-1)
 
 With those changes, methods like **contains()**, **startsWith()**, **endsWith**, **equals()**, **isEmpty()**, **subString()** and **charAt(coding chair)** are supported to raise a `Runtime Exception`.
 
 <br>
 
-***NullPointerException*** - *contains()*, *startsWith()*, *endsWith*, *equals()*, *isEmpty()*
+<h3>NullPointerException</h3> 
+
+***contains()*** ***startsWith()*** ***endsWith*** ***equals()*** ***isEmpty()***
+
 
 ```java
 String str = Verifier.nondetString();
