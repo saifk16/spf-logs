@@ -1,0 +1,69 @@
+./jpf-sv-comp --propertyfile ../../sv-benchmarks/java/properties/runtime-exception.prp ../../sv-benchmarks/java/common ../../sv-benchmarks/java/jpf-regression/ExSymExe11_false
+
+
+--------------------------------------------------------------------------------
+
+
+PROP_FILE=../../sv-benchmarks/java/properties/runtime-exception.prp
+CHECK(init(Main.main()), LTL(G ! uncaught(java.lang.RuntimeException)))
+ASSERTION_MODE=FALSE
+RUNTIME_EXCEPTION_MODE=TRUE
+/tmp/jpf-benchmark.5yDmV1/config.jpf
+LD_LIBRARY_PATH=/home/f8/Desktop/bench-defs/bin/spf-2Fi5DX82Mr/jpf-symbc/lib:/home/f8/Desktop/SPF/jpf-symbc/lib:
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev a9cfdfd20e921dacd2aaa6e92103681eb28cc81d) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 7/8/25 3:02 AM
+Testing ExSymExe11
+branch FOO1
+branch BOO2
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.test(Main.java:56)
+	at Main.main(Main.java:38)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.test(Main.java:56)
+	at Main.main(Main.java:38)
+
+
+====================================================== Method Summaries
+
+====================================================== Method Summaries (HTML)
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.test(Main.java:5..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=1,visited=0,backtracked=0,end=0
+search:             maxDepth=1,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=0
+heap:               new=489,released=0,maxLive=0,gcCycles=0
+instructions:       6422
+max memory:         44MB
+loaded code:        classes=89,methods=1870
+
+====================================================== search finished: 7/8/25 3:02 AM
+inside runtime_exception_mode=true
+UNKNOWN

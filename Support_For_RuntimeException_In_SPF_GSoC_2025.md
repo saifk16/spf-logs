@@ -136,7 +136,7 @@ The goal in this project was to add support for raising **runtime exceptions** l
 
 <br>
 
-In addition, by incorporating this support, the project aimed to improve SPF’s performance on the **SV-COMP benchmarks** (runtime-exception set). The SV-COMP score increased significantly compared to earlier runs, for this, the same **runtime-exception benchmark set** was executed on three different SPF versions (zip files):
+In addition, by incorporating this support, the project aimed to improve SPF’s performance on the **SV-COMP benchmarks** (runtime-exception set). The SV-COMP score increased significantly compared to earlier runs, for this, the same **runtime-exception benchmark set** was executed on two different SPF versions (zip files):
 
 <table align="center" cellspacing="0" cellpadding="6">
   <tr>
@@ -145,18 +145,13 @@ In addition, by incorporating this support, the project aimed to improve SPF’s
     <th>Source Link</th>
   </tr>
   <tr>
-    <td>Zenodo Release</td>
-    <td>spf1.zip</td>
-    <td><a href="https://zenodo.org/records/10407521" target="_blank">Zenodo Record</a></td>
-  </tr>
-  <tr>
     <td>SV-COMP Branch of SPF</td>
-    <td>spf2.zip</td>
+    <td>SPF-1.0</td>
     <td><a href="https://github.com/SymbolicPathFinder/jpf-symbc/tree/sv-comp" target="_blank">GitHub Branch</a></td>
   </tr>
   <tr>
     <td>Runtime Exception Support Version</td>
-    <td>spf3.zip</td>
+    <td>SPF-2.0</td>
     <td><div align="center">-----</div></td>
   </tr>
 </table>
@@ -177,114 +172,92 @@ A detailed comparison of results before and after adding runtime-exception suppo
 This section summarizes the improvements achieved by adding *runtime exception support* in SPF. The evaluation was conducted on the **SV-COMP Runtime Exception benchmark set** as well as the **ReachSafety benchmark set**. Please see [this](https://gitlab.com/sosy-lab/sv-comp/bench-defs/-/blob/main/benchmark-defs/spf.xml?ref_type=heads) and [this](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/blob/main/java/ReachSafety-Java.set?ref_type=heads).
 
 <table align="center">
-    <thead>
-        <tr>
-            <th rowspan="2">Metric</th>
-            <th colspan="3">RuntimeException</th>
-            <th colspan="3">ReachSafety</th>
-        </tr>
-        <tr>
-            <th>SPF-1.0</th>
-            <th>SPF-2.0</th>
-            <th>SPF-3.0</th>
-            <th>SPF-1.0</th>
-            <th>SPF-2.0</th>
-            <th>SPF-3.0</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>Total Files</strong></td>
-            <td>673</td>
-            <td>673</td>
-            <td>673</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td><strong>Correct</strong></td>
-            <td>167</td>
-            <td>275</td>
-            <td>492</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td><strong>Correct True</strong></td>
-            <td>159</td>
-            <td>267</td>
-            <td>482</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td><strong>Correct False</strong></td>
-            <td>8</td>
-            <td>8</td>
-            <td>10</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td><strong>Incorrect</strong></td>
-            <td>242</td>
-            <td>278</td>
-            <td>2</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td><strong>Incorrect True</strong></td>
-            <td>0</td>
-            <td>0</td>
-            <td>2</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td><strong>Incorrect False</strong></td>
-            <td>242</td>
-            <td>278</td>
-            <td>0</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td><strong>Unknown</strong></td>
-            <td>264</td>
-            <td>120</td>
-            <td>179</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td><strong>Score</strong></td>
-            <td>-3546</td>
-            <td>-3906</td>
-            <td>910</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td><strong>Max Score</strong></td>
-            <td>1327</td>
-            <td>1327</td>
-            <td>1327</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+        <thead>
+            <tr>
+                <th rowspan="2">Metric</th>
+                <th colspan="2">RuntimeException</th>
+                <th colspan="2">ReachSafety</th>
+            </tr>
+            <tr>
+                <th>SPF-1.0</th>
+                <th>SPF-2.0</th>
+                <th>SPF-1.0</th>
+                <th>SPF-2.0</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Total Files</strong></td>
+                <td>673</td>
+                <td>673</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><strong>Correct</strong></td>
+                <td>275</td>
+                <td>492</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><strong>Correct True</strong></td>
+                <td>267</td>
+                <td>482</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><strong>Correct False</strong></td>
+                <td>8</td>
+                <td>10</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><strong>Incorrect</strong></td>
+                <td>278</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><strong>Incorrect True</strong></td>
+                <td>0</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><strong>Incorrect False</strong></td>
+                <td>278</td>
+                <td>0</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><strong>Unknown</strong></td>
+                <td>120</td>
+                <td>179</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><strong>Score</strong></td>
+                <td>-3906</td>
+                <td>910</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><strong>Max Score</strong></td>
+                <td>1327</td>
+                <td>1327</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
 
 <br>
 
