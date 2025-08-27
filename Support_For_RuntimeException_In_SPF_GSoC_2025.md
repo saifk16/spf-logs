@@ -299,7 +299,18 @@ Link to execution logs for detailed proof of result causes:
 
 - SPF-1.0 - [reachsafety](logs/SPF-1.0/reachsafety/) | [runtime-exception](logs/SPF-1.0/runtime/)
 - SPF-2.0 - [reachsafety](logs/SPF-2.0/Date-26Aug/reachsafety/) | [runtime-exception](logs/SPF-2.0/Date-26Aug/runtime-exception/)
-The SV-COMP evaluation script used for these benchmarks can be found [here - link to SV-COMP script].
+- The sv-comp script used for these benchmarks can be found [here](https://github.com/saifk16/jpf-symbc/blob/handler-1/jpf-sv-comp).
+
+<br>
+
+The evaluation covers two distinct benchmark categories, each targeting different verification modes:
+
+- ***RuntimeException***: This benchmark set focuses specifically on runtime exception detection and handling, including null pointer exceptions, array out of bounds, and other runtime errors.
+- ***ReachSafety Benchmarks***: This benchmarks are for the assertions, focusing on reachability analysis and safety property verification rather than runtime exception detection.
+
+<br>
+
+It's worth noting that the **SV-COMP** community and **SOSY-Labs** developers have intentionally made their benchmarks to avoid *null pointer exception detection* scenarios. This design choice reflects their focus on other types of program verifications. As an evidence, the verification methods typically ensure that `Verifier.nondetString()` never returns null, as documented in [issue &#35;1438](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/issues/1438).
 
 
 <br>
