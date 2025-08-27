@@ -83,10 +83,8 @@ A set of quick links are provided below for easy reference. For more information
   <td><b>Pull Requests</b></td>
   <td>
     <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/111">
-      #111 
-      <span style="background-color:#8957e5; color:white; padding:2px 2px; text-align:center; border-radius:3px; font-size:12px;">
-        Merged
-      </span>
+        #111 
+      <img src="https://img.shields.io/badge/Merged-8A2BE2" alt-text="merged">
     </a>, 
     <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">#120</a>
   </td>
