@@ -130,7 +130,7 @@ The goal in this project was to add support for raising **runtime exceptions** l
   <tr>
     <td><b>NumberFormatException</b></td>
     <td><div align="center">----------</div></td>
-    <td>See <a href="#">this section</a> for details</td>
+    <td>See <a href="#Future">this section</a> for details</td>
   </tr>
 </table>
 
@@ -292,7 +292,7 @@ This section summarizes the improvements achieved by adding *runtime exception s
 
 All the code I have contributed can be found at [this url](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler).
 
-With those changes, methods like **contains()**, **startsWith()**, **endsWith**, **equals()**, **isEmpty()**, **subString()** and **charAt()** are supported to raise a `Runtime Exception`.
+With those changes, methods like **contains()**, **startsWith()**, **endsWith**, **equals()**, **isEmpty()**, **subString()** and **charAt(coding chair)** are supported to raise a `Runtime Exception`.
 
 <br>
 
@@ -340,6 +340,9 @@ Earlier we only had one choice:
 But there should be two other choices (all total 3), because the **beginIndex** in this case can be less than 0 or it can also be greater than the length of the **str**, these two are the cases were we should raise the exception.
 
 
+<h2 id="#Future">Future Work</h2>
+
+NumberFormatException is not supported in this project because of no support for the parseFloat and parseDouble methods in **SPF**, however in 2022 a contributor added partial support to parseInt and ISINTEGER comparator, in the same way we can support the ISFLOAT and ISDOUBLE using the SMT Lib floating point theory as both float and double are floating point numbers in java.
 
 
 
