@@ -326,7 +326,7 @@ With those changes, methods like **contains()**, **startsWith()**, **endsWith()*
 
 <br>
 
-<h3>NullPointerException</h3> 
+<h3>1. NullPointerException</h3> 
 
 NullPointerException is an unchecked exception in Java that occurs when an attempt is made to access methods or properties of an object reference that points to null. In symbolic execution, this is particularly important because symbolic variables can potentially represent null values. The following string methods now properly handle NullPointerException scenarios: 
 
@@ -365,11 +365,11 @@ We can test various combinations of symbolic and concrete values:
 // Two String values
 // 1. String str
 // 2. String arg
-// 3. Verifier.nondetString() will give a symbolic value to these two
+// 3. Verifier.nondetString() will give a symbolic value to these two it added to them or used
 ```
 
-- **Both symbolic:** where both strings are symbolic, for example `str1.contains(str2)`
-- Caller concrete, argument symbolic: "HELLO".equals(str) - concrete string calls equals with symbolic argument
+- **Both of them are symbolic:** where both `String str = Verifier.nondetString` and `String arg = Verifier.nondetString`, for example `str.contains(args)`
+- **One of them is concrete and the other is symbolic**: **str** can be symbolic but it can be smybolic as well, same goes for the **arg**, for example 
 - Caller symbolic, argument concrete: str.equals("HELLO") - symbolic string calls equals with concrete argument
 - Both concrete: "HELLO".equals("WORLD") - both strings are concrete
 
