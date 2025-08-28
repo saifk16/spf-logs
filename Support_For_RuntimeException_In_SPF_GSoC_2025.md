@@ -320,7 +320,7 @@ It's worth noting that the **SV-COMP** community and **SOSY-Labs** developers ha
 
 All the code I have contributed can be found at these URLs, [compare](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler), [PR &#35;111](https://github.com/SymbolicPathFinder/jpf-symbc/pull/111), [PR &#35;120](https://github.com/SymbolicPathFinder/jpf-symbc/pull/120), [code repo](https://github.com/saifk16/jpf-symbc), [handler-1 branch](https://github.com/saifk16/jpf-symbc/compare/handler...saifk16:jpf-symbc:handler-1)
 
-With those changes, methods like **contains()**, **startsWith()**, **endsWith()**, **equals()**, **isEmpty()**, **subString()** and **charAt(coding chair)** are supported to raise a `Runtime Exception`.
+With those changes, methods like **contains()**, **startsWith()**, **endsWith()**, **equals()**, **isEmpty()**, **subString()** and **charAt()** are supported to raise a `Runtime Exception`.
 
 **Runtime exceptions** are unchecked exceptions that occur during program execution and can potentially crash a program if not handled properly. When dealing with symbolic values (variables that can represent multiple possible concrete values), SPF needs to consider possible runtime exceptions that could occur, not just the successful execution paths.
 
@@ -328,9 +328,9 @@ With those changes, methods like **contains()**, **startsWith()**, **endsWith()*
 
 <h3>NullPointerException</h3> 
 
-NullPointerException is an unchecked exception in Java that occurs when an attempt is made to access methods or properties of an object reference that points to null. In symbolic execution, this is particularly important because symbolic variables can potentially represent null values.
+NullPointerException is an unchecked exception in Java that occurs when an attempt is made to access methods or properties of an object reference that points to null. In symbolic execution, this is particularly important because symbolic variables can potentially represent null values. The following string methods now properly handle NullPointerException scenarios: 
 
-***contains()*** ***startsWith()*** ***endsWith*** ***equals()*** ***isEmpty()***
+***contains()***, ***startsWith()***, ***endsWith***, ***equals()***, ***isEmpty()***
 
 
 ```java
