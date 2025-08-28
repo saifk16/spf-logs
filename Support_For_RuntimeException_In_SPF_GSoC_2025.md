@@ -332,6 +332,7 @@ NullPointerException is an unchecked exception in Java that occurs when an attem
 
 ***contains()***, ***startsWith()***, ***endsWith()***, ***equals()***, ***isEmpty()***
 
+<br>
 
 ```java
 String str = Verifier.nondetString();
@@ -354,11 +355,20 @@ Enhanced behavior (3 execution paths):
 - Path 2: **str** does not contain "HELLO" (but is not null)
 - Path 3: **str** is null (NullPointerException is thrown)
 
+<br>
+
 **Test Case Variations**
 
 We can test various combinations of symbolic and concrete values:
 
-- Both symbolic: str1.equals(str2) - where both strings are symbolic
+```java
+// Two String values
+// 1. String str
+// 2. String arg
+// 3. Verifier.nondetString() will give a symbolic value to these two
+```
+
+- **Both symbolic:** where both strings are symbolic, for example `str1.contains(str2)`
 - Caller concrete, argument symbolic: "HELLO".equals(str) - concrete string calls equals with symbolic argument
 - Caller symbolic, argument concrete: str.equals("HELLO") - symbolic string calls equals with concrete argument
 - Both concrete: "HELLO".equals("WORLD") - both strings are concrete
