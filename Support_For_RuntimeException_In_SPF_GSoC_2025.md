@@ -293,7 +293,7 @@ The addition of **Z3str3** significantly improved the ability to handle string-r
 - Unsupported string operations
 - Unknown constants or symbolic methods that are not yet handled.
 
-For the **ReachSafety** benchmarks, you can observe slight improvements in the results, with the score improving from `-606` to `-571` and a small reduction in incorrect results from `46` to `40`, unknowns from `120` to `172`. These modest changes are primarily attributed to the same script refinements and solver improvements (Z3str3 addition) mentioned above, rather than any runtime exception support additions. These benchmarks focus purely on assertion-based reachability analysis.
+For the **ReachSafety** benchmarks, you can observe slight improvements in the results, with the score improving from `-606` to `-571` and a small reduction in incorrect results from `46` to `40`, unknowns from `120` to `172`. These modest changes are primarily attributed to the same script refinements and solver improvements (Z3str3 addition) mentioned above, rather than any runtime exception support additions. These benchmarks focus purely on assertion-based reachability.
 
 <br>
 
@@ -318,13 +318,17 @@ It's worth noting that the **SV-COMP** community and **SOSY-Labs** developers ha
 
 <h2>Contributions</h2>
 
-All the code I have contributed can be found at these url's, [compare](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler), [PR &#35;111](https://github.com/SymbolicPathFinder/jpf-symbc/pull/111), [PR &#35;120](https://github.com/SymbolicPathFinder/jpf-symbc/pull/120), [code repo](https://github.com/saifk16/jpf-symbc), [handler-1 branch](https://github.com/saifk16/jpf-symbc/compare/handler...saifk16:jpf-symbc:handler-1)
+All the code I have contributed can be found at these URLs, [compare](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler), [PR &#35;111](https://github.com/SymbolicPathFinder/jpf-symbc/pull/111), [PR &#35;120](https://github.com/SymbolicPathFinder/jpf-symbc/pull/120), [code repo](https://github.com/saifk16/jpf-symbc), [handler-1 branch](https://github.com/saifk16/jpf-symbc/compare/handler...saifk16:jpf-symbc:handler-1)
 
-With those changes, methods like **contains()**, **startsWith()**, **endsWith**, **equals()**, **isEmpty()**, **subString()** and **charAt(coding chair)** are supported to raise a `Runtime Exception`.
+With those changes, methods like **contains()**, **startsWith()**, **endsWith()**, **equals()**, **isEmpty()**, **subString()** and **charAt(coding chair)** are supported to raise a `Runtime Exception`.
+
+**Runtime exceptions** are unchecked exceptions that occur during program execution and can potentially crash a program if not handled properly. When dealing with symbolic values (variables that can represent multiple possible concrete values), SPF needs to consider possible runtime exceptions that could occur, not just the successful execution paths.
 
 <br>
 
 <h3>NullPointerException</h3> 
+
+NullPointerException is an unchecked exception in Java that occurs when an attempt is made to access methods or properties of an object reference that points to null. In symbolic execution, this is particularly important because symbolic variables can potentially represent null values.
 
 ***contains()*** ***startsWith()*** ***endsWith*** ***equals()*** ***isEmpty()***
 
