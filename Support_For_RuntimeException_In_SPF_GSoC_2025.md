@@ -359,19 +359,25 @@ Enhanced behavior (3 execution paths):
 
 **Test Case Variations**
 
-We can test various combinations of symbolic and concrete values:
+We can test various combinations of symbolic and concrete values.
 
 ```java
-// Two String values
-// 1. String str
-// 2. String arg
-// 3. Verifier.nondetString() will give a symbolic value to these two it added to them or used
-```
+// Case 1: Both symbolic
+String str = Verifier.nondetString();
+String arg = Verifier.nondetString();
 
-- **Both of them are symbolic:** where both `String str = Verifier.nondetString` and `String arg = Verifier.nondetString`, for example `str.contains(args)`
-- **One of them is concrete and the other is symbolic**: **str** can be symbolic but it can be smybolic as well, same goes for the **arg**, for example 
-- Caller symbolic, argument concrete: str.equals("HELLO") - symbolic string calls equals with concrete argument
-- Both concrete: "HELLO".equals("WORLD") - both strings are concrete
+// Case 2: str is concrete, arg is symbolic  
+String str = "HELLO";
+String arg = Verifier.nondetString();
+
+// Case 3: str is symbolic, arg is concrete
+String str = Verifier.nondetString();
+String arg = "HELLO";
+
+// Case 4: Both concrete
+String str = "HELLO";
+String arg = "WORLD";
+```
 
 After this a flag `nullPointer.Exception` was added in SPF so the choice 0, i.e., for the null check can be skipped for now, but this support or code change will help the users of **SPF**, as a **symbolic string** can be **null** as well.
 
