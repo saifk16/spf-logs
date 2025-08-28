@@ -354,6 +354,15 @@ Enhanced behavior (3 execution paths):
 - Path 2: **str** does not contain "HELLO" (but is not null)
 - Path 3: **str** is null (NullPointerException is thrown)
 
+**Test Case Variations**
+
+We can test various combinations of symbolic and concrete values:
+
+- Both symbolic: str1.equals(str2) - where both strings are symbolic
+- Caller concrete, argument symbolic: "HELLO".equals(str) - concrete string calls equals with symbolic argument
+- Caller symbolic, argument concrete: str.equals("HELLO") - symbolic string calls equals with concrete argument
+- Both concrete: "HELLO".equals("WORLD") - both strings are concrete
+
 After this a flag `nullPointer.Exception` was added in SPF so the choice 0, i.e., for the null check can be skipped for now, but this support or code change will help the users of **SPF**, as a **symbolic string** can be **null** as well.
 
 <br>
