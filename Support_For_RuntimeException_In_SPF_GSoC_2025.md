@@ -330,7 +330,7 @@ With those changes, methods like **contains()**, **startsWith()**, **endsWith()*
 
 NullPointerException is an unchecked exception in Java that occurs when an attempt is made to access methods or properties of an object reference that points to null. In symbolic execution, this is particularly important because symbolic variables can potentially represent null values. The following string methods now properly handle NullPointerException scenarios: 
 
-***contains()***, ***startsWith()***, ***endsWith***, ***equals()***, ***isEmpty()***
+***contains()***, ***startsWith()***, ***endsWith()***, ***equals()***, ***isEmpty()***
 
 
 ```java
@@ -342,18 +342,17 @@ In the above example we can clearly see that **str** is symbolic and **HELLO** i
 
 Earlier we only had two choices:
 
-- First choice where the **str** can contain **HELLO**
-- Second choice where the **str** can not contain **HELLO** 
-
-</br>
+- Path 1: **str** can contain "HELLO"
+- Path 2: **str** can not contain "HELLO" 
 
 But there should can be a third choice as well because the **str** can be equal to **null** as well, as it is symbolic, so we need to add another choice for this case in the [SymbolicStringHandler](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler#diff-6feea6c550b38c071b2b438affe6dd6b0be73f795de404d4410b6354820375ecR931) in the method ***handleBooleanStringInstructions*** which is handling **contains()**, **startsWith()**, **endsWith**, **equals()**. 
 But, **isEmpty()** is not included in this method it is handled in the method [handleIsEmpty](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler#diff-6feea6c550b38c071b2b438affe6dd6b0be73f795de404d4410b6354820375ecR1371).
 
-> [!NOTE]
-> Although we have added support for the `NullPointerException` but the `Verifier.nondetString()` will never return null. 
+Enhanced behavior (3 execution paths):
 
-See the [issue 1438](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/issues/1438) and this file [Verifier.java](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/blob/5393b24a8864900ae00b6b159b7d9405b04fc62a/java/common/org/sosy_lab/sv_benchmarks/Verifier.java#L52-59)
+- Path 1: **str** contains "HELLO" 
+- Path 2: **str** does not contain "HELLO" (but is not null)
+- Path 3: **str** is null (NullPointerException is thrown)
 
 After this a flag `nullPointer.Exception` was added in SPF so the choice 0, i.e., for the null check can be skipped for now, but this support or code change will help the users of **SPF**, as a **symbolic string** can be **null** as well.
 
