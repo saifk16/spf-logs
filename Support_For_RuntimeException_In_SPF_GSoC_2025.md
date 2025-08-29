@@ -519,14 +519,75 @@ These many things were supported in this pr, you can see the test cases added in
 
 <br>
 
-<h2 id="#Future">Future Work</h2>
+### SV-COMP Execution Script Enhancements
 
-NumberFormatException is not supported in this project because of no support for the parseFloat and parseDouble methods in **SPF**, however in 2022 a contributor added partial support to parseInt and ISINTEGER comparator, in the same way we can support the ISFLOAT and ISDOUBLE using the SMT Lib floating point theory as both float and double are floating point numbers in java.
+The SV-COMP execution script was enhanced to properly handle different types of properties and exceptions.  
+The refined script introduces **intelligent property detection** and appropriate configuration based on the property file content.
+
+---
+
+#### Key Script Improvements
+
+The enhanced script analyzes the property file to determine the execution mode:
+
+```bash
+# Property detection logic
+ASSERTION_MODE="FALSE"
+RUNTIME_EXCEPTION_MODE="FALSE"
+
+grep "assert" $PROP_FILE
+if [ $? -eq 0 ]; then
+  ASSERTION_MODE="TRUE"
+fi
+
+grep "Exception" $PROP_FILE
+if [ $? -eq 0 ]; then
+  RUNTIME_EXCEPTION_MODE="TRUE"
+fi
+```
+
+- **Dynamic exception handling**: The script automatically detects whether the property file contains assertion-based properties or runtime exception properties.  
+- **Conditional configuration**: Based on detection, it sets appropriate SPF configuration flags like `runtime.exception` and `search.multiple_errors`. As discussed earlier in **Assertion Mode** these flags are set to *false*, but *true* in the case of **RuntimeException Mode**
+
+In runtime exception mode, the script:
+
+- Returns SAFE if assertion errors are found but no Java exceptions OR if no errors are detected at all
+- Returns UNKNOWN specifically when ClassNotFoundException is detected (indicating setup/classpath issues)
+- Returns UNSAFE when Java exceptions (like NullPointerException, StringIndexOutOfBoundsException) are detected
+- Returns UNKNOWN for any other unhandled cases
+
+In assertion mode, the script:
+
+- Returns SAFE if no errors are detected OR if Java exceptions are found but no assertion errors
+- Returns UNSAFE only when assertion errors are specifically detected
+- Returns UNKNOWN for any other unhandled cases
 
 <br>
 
-<h2>Challenges Faced</h2>
+This script refinement was crucial for proper integration with SV-COMP benchmarks and helped us to achieve a better score.
 
+<br>
+
+### Math.max() and Math.min() Improvements (PR &#35;111 - MERGED)
+
+A significant improvement was made to the `Math.max()` and `Math.min()` methods in SPF to handle **edge cases** correctly, particularly for floating-point operations.  
+The enhanced implementation now properly handles:
+
+### Special Cases Handled
+- **NaN (Not a Number):** Both `Double.NaN` and `Float.NaN`  
+- **Signed zeros:** Correct handling of `0.0` and `-0.0` for both `double` and `float` types  
+- **IEEE 754 compliance:** Ensures results match standard Java behavior
+
+> [!NOTE]
+> This was done before the coding period (June 2 2025) started (GSoC 2025)
+
+<br>
+
+
+
+<h2 id="#Future">Future Work</h2>
+
+NumberFormatException is not supported in this project because of no support for the parseFloat and parseDouble methods in **SPF**, however in 2022 a contributor added partial support to parseInt and ISINTEGER comparator, in the same way we can support the ISFLOAT and ISDOUBLE using the SMT Lib floating point theory as both float and double are floating point numbers in java.
 
 <br>
 
