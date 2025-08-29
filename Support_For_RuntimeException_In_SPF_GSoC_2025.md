@@ -384,7 +384,47 @@ String arg = "WORLD";
 
 <h4>A new config flag</h4>
 
-A new configuration flag **`nullPointer.Exception`** was added to SPF. When enabled (*true*), the **Choice 0** for null checks on symbolic strings will be explored, followed by Choice 1 and Choice 2 for the above mentioned string methods. When disabled (*false*), only the two choices will run, skipping the **Choice 0** of null check, by default the flag is passed in the **sv-comp script** as *false*, see the last paragraph in this [section.](#verifier)
+A new configuration flag **`nullPointer.Exception`** was added to SPF. When enabled (*true*), the **Choice 0** for null checks on symbolic strings will be explored, followed by Choice 1 and Choice 2 for the above mentioned string methods. When disabled (*false*), only the two choices will run, skipping the **Choice 0** of null check, by default the flag is passed in the **sv-comp script** as *false*, [see this.](#verifier)
+
+> [!NOTE]
+> All the above mentioned methods are boolean based so they can return false and true both while symbolic exploration, hence the two choices choice 1 for false cand choice 2 for true, choice 0 is to check for null checks.
+
+<br>
+
+<h4>IFNULL and IFNONNULL</h4>
+
+This pr also adds the support to **IFNULL** and **IFNONNULL** bytecode instructions in SPF. When the **`nullPointer.exception`** configuration flag is enabled, spf performs symbolic execution by creating path conditions that explore both null and non-null scenarios for string expressions. 
+
+For **IFNULL**, checking happens whether a symbolic string not equals or equals null.
+
+```java
+// This will invoke the IFNULL bytecode instruction
+// Use javap -c to see the bytecode of a program or of a test case
+
+String str = Verifier.nondetString();
+if (str != null) {
+    System.out.println("str is not null");
+} else {
+    System.out.println("str is null");
+}
+```
+
+<br>
+
+Conversely, **IFNONNULL** operations reverse the logic, and checking happens whether a symbolic string equals or not equals null.
+
+```java
+// This will invoke the IFNONNULL bytecode instruction
+// Use javap -c to see the bytecode of a program or of a test case
+
+String str = Verifier.nondetString();
+if (str == null) {
+    System.out.println("str is null");
+} else {
+    System.out.println("str is not null");
+}
+```
+
 
 <br>
 
