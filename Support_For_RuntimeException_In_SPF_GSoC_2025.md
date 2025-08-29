@@ -344,8 +344,8 @@ Earlier we only had two choices:
 - Path 1: **str** can contain "HELLO"
 - Path 2: **str** can not contain "HELLO" 
 
-But there should can be a third choice as well because the **str** can be equal to **null** as well, as it is symbolic, so we need to add another choice for this case in the [SymbolicStringHandler](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler#diff-6feea6c550b38c071b2b438affe6dd6b0be73f795de404d4410b6354820375ecR931) in the method ***handleBooleanStringInstructions*** which is handling **contains()**, **startsWith()**, **endsWith**, **equals()**. 
-But, **isEmpty()** is not included in this method it is handled in the method [handleIsEmpty](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler#diff-6feea6c550b38c071b2b438affe6dd6b0be73f795de404d4410b6354820375ecR1371).
+But there should can be a third choice as well because the **str** can be equal to **null** as well, as it is symbolic, so we need to add another choice for this case in the [SymbolicStringHandler](https://github.com/SymbolicPathFinder/jpf-symbc/blob/runtime-exception/jpf-symbc/src/main/gov/nasa/jpf/symbc/bytecode/SymbolicStringHandler.java) in the method ***handleBooleanStringInstruction()*** which is handling **contains()**, **startsWith()**, **endsWith**, **equals()**. 
+But, **isEmpty()** is not included in this method it is handled in the method ***handleIsEmpty()***.
 
 Enhanced behavior (3 execution paths):
 
@@ -425,28 +425,113 @@ if (str == null) {
 }
 ```
 
+<br>
+
+These many things were supported in this pr, you can see the test cases added in this pr, [here](https://github.com/SymbolicPathFinder/jpf-symbc/tree/runtime-exception/jpf-symbc/src/examples/npe).
 
 <br>
 
-***StringIndexOutOfBoundsException*** - *subString()*, *charAt()* 
+<h3>2. StringIndexOutOfBoundsException Support <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/133">(PR &#35;133 - OPEN)</a></h3>
+
+StringIndexOutOfBoundsException is an unchecked exception in Java that occurs when an attempt is made to access a character at an invalid index in a string. In symbolic execution, this is particularly important because symbolic variables can potentially represent values than can be negative or greater than the length of a string. The following string methods now properly handle StringIndexOutOfBoundsException scenarios:
+
+***subString()***, ***charAt()*** 
 
 ```java
 String str = Verifier.nondetString();
-assert(str.subString(beginIndex));
+assert(str.charAt(0));
 ```
 
-In the above example, similar to the first one we can clearly see that here also **str** is symbolic, but the main importance in **subString()** and **charAt** are the index that are passed to them, here we have the **beginIndex** which can be symbolic as well can be concrete as well.
+In the above example, similar to the first one we can clearly see that **str** is symbolic, but the main importance in **subString()** and **charAt()** is the index that is passed to them, we can have `index` for **charAt()**, only `beginIndex` or `beginIndex` with the `endIndex` passed to **subString().**
 
 Earlier we only had one choice:
 
-- Handling the **subString()** or **charAt()** operation with atleast one parameter symbolic.
+- Handling the **subString()** or **charAt()** valid operation/execution with atleast one parameter being symbolic.
 
-But there should be two other choices (all total 3), because the **beginIndex** in this case can be less than 0 or it can also be greater than the length of the **str**, these two are the cases were we should raise the exception.
+But there should be additional choices as well because the index can be invalid, so we need to add other choices for these cases in the ***SymbolicStringHandler*** in the method **handleCharAt()**, **handleSubString1()** and **handleSubString2().**
 
+Enhanced behavior for charAt() (3 execution paths):
+
+- Path 1: index is negative (StringIndexOutOfBoundsException is thrown)
+- Path 2: index is greater than or equal to string **str** length (StringIndexOutOfBoundsException is thrown)
+- Path 3: index is in the bound range and operation executes successfully
+
+Enhanced behavior for substring(beginIndex) (3 execution paths):
+
+- Path 1: beginIndex is negative (StringIndexOutOfBoundsException is thrown)
+- Path 2: beginIndex is greater than string **str** length (StringIndexOutOfBoundsException is thrown)
+- Path 3: beginIndex is within the bound range and operation executes successfully
+
+Enhanced behavior for substring(beginIndex, endIndex) (6 execution paths):
+
+- Path 1: beginIndex is negative (StringIndexOutOfBoundsException is thrown)
+- Path 2: endIndex is negative (StringIndexOutOfBoundsException is thrown)
+- Path 3: beginIndex is greater than string length (StringIndexOutOfBoundsException is thrown)
+- Path 4: endIndex is greater than string length (StringIndexOutOfBoundsException is thrown)
+- Path 5: beginIndex is greater than endIndex (StringIndexOutOfBoundsException is thrown)
+- Path 6: All indices are within the bound range and operation executes successfully
+
+<br>
+
+<h4>Variations of test cases</h4>
+
+We can test various combinations of symbolic and concrete values for both strings and indices. A single index passed to the mentioned methods can be either symbolic or concrete. Similarly, for the substring(beginIndex, endIndex) case, both indices can be symbolic, or either one of them can be symbolic. When the index or indices are concrete but the str is symbolic, SPF will still explore symbolically. If nothing is symbolic (both string and indices are concrete), SPF will not explore symbolically.
+
+```java
+// Case 1: Both string and index are symbolic
+String str = Verifier.nondetString();
+int index = Verifier.nondetInt();
+
+// Case 2: String is concrete, index is symbolic  
+String str = "HELLO";
+int index = Verifier.nondetInt();
+
+// Case 3: String is symbolic, index is concrete
+String str = Verifier.nondetString();
+int index = -1;
+
+// Case 4: Both string and index are concrete
+String str = "HELLO";
+int index = 2;
+
+// Case 5: substring with both indices symbolic
+String str = Verifier.nondetString();
+int beginIndex = Verifier.nondetInt();
+int endIndex = Verifier.nondetInt();
+
+// Case 6: substring with mixed symbolic/concrete indices
+String str = "HELLO";
+int beginIndex = Verifier.nondetInt();
+int endIndex = 3;
+```
+<br>
+
+<h4>A new config flag </h4>
+
+A new configuration flag **`runtime.exception`** was added to SPF. When enabled (*true*), the **Choice 0**, **Choice 1**, etc. for index bound checks on symbolic strings will be explored, followed by the final choice for valid execution of the above mentioned string methods. When disabled (*false*), only the valid execution path will run, skipping the bound checking choices. This flag is used differently and has been discussed later in this section.
+
+<br>
+
+These many things were supported in this pr, you can see the test cases added in this pr, here.
+
+> [!NOTE]
+> This pr is still open and is under reveiw.
+
+<br>
 
 <h2 id="#Future">Future Work</h2>
 
 NumberFormatException is not supported in this project because of no support for the parseFloat and parseDouble methods in **SPF**, however in 2022 a contributor added partial support to parseInt and ISINTEGER comparator, in the same way we can support the ISFLOAT and ISDOUBLE using the SMT Lib floating point theory as both float and double are floating point numbers in java.
+
+<br>
+
+<h2>Challenges Faced</h2>
+
+
+<br>
+
+<h2>Conclusion</h2>
+
 
 
 
