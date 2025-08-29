@@ -84,7 +84,8 @@ A set of quick links are provided below for easy reference. For more information
   <td>
     <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/111">
     &#35;111</a> (Merged), 
-    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">&#35;120</a> (Under Review)
+    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">&#35;120</a> (Merged)
+    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/133">&#35;133</a> (Under Review)
   </td>
 </tr>
 </table>
@@ -318,13 +319,12 @@ It's worth noting that the **SV-COMP** community and **SOSY-Labs** developers ha
 
 <h2>Contributions</h2>
 
-All the code I have contributed can be found at these URLs, [compare](https://github.com/SymbolicPathFinder/jpf-symbc/compare/runtime-exception...saifk16:jpf-symbc:handler), [PR &#35;111](https://github.com/SymbolicPathFinder/jpf-symbc/pull/111), [PR &#35;120](https://github.com/SymbolicPathFinder/jpf-symbc/pull/120), [code repo](https://github.com/saifk16/jpf-symbc), [handler-1 branch](https://github.com/saifk16/jpf-symbc/compare/handler...saifk16:jpf-symbc:handler-1)
-
+All the code I have contributed can be found at these URLs, [PR &#35;111](https://github.com/SymbolicPathFinder/jpf-symbc/pull/111), [PR &#35;120](https://github.com/SymbolicPathFinder/jpf-symbc/pull/120), [PR &#35;133](https://github.com/SymbolicPathFinder/jpf-symbc/pull/133), [code repository](https://github.com/saifk16/jpf-symbc),
 With those changes, methods like **contains()**, **startsWith()**, **endsWith()**, **equals()**, **isEmpty()**, **subString()** and **charAt()** are supported to raise a `Runtime Exception`. When dealing with symbolic values (variables that can represent multiple possible concrete values), SPF needs to consider possible runtime exceptions that could occur, not just the successful execution paths.
 
 <br>
 
-<h3>1. NullPointerException Support <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">(PR &#35;120)</a></h3> 
+<h3>1. NullPointerException Support <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">(PR &#35;120 - MERGED)</a></h3> 
 
 NullPointerException is an unchecked exception in Java that occurs when an attempt is made to access methods or properties of an object reference that points to null. In symbolic execution, this is particularly important because symbolic variables can potentially represent null values. The following string methods now properly handle NullPointerException scenarios: 
 
@@ -355,7 +355,7 @@ Enhanced behavior (3 execution paths):
 
 <br>
 
-**Variations of test cases**
+<h4>Variations of test cases</h4>
 
 We can test various combinations of symbolic and concrete values.
 
@@ -378,7 +378,7 @@ String arg = "WORLD";
 ```
 
 > [!NOTE]
-> This approach will work the same for all string methods. However, for the equals method, when we call it on a concrete value and the argument passed is symbolic (which can be null or non-null), it will not return a NullPointerException because equals works differently in the String case - the concrete string object's equals method handles null arguments gracefully.
+> The above cases will work the same for all string methods, and the **Case 4** will not be handled symbolically, as it has nothing smybolic in it. For the ***equals() method***, when we call it on a concrete value and the argument passed is symbolic (which can be null), `HELLO.equals(str)`, it will not throw a **NullPointerException** because ***equals() method*** works differently in string case, it compares the content not the object reference.
 
 After this a flag `nullPointer.Exception` was added in SPF so the choice 0, i.e., for the null check can be skipped for now, but this support or code change will help the users of **SPF**, as a **symbolic string** can be **null** as well.
 
