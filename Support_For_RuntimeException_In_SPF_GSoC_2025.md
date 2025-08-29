@@ -313,7 +313,7 @@ The evaluation covers two distinct benchmark categories, each targeting differen
 
 <br>
 
-It's worth noting that the **SV-COMP** community and **SOSY-Labs** developers have intentionally made their benchmarks to avoid *null pointer exception detection* scenarios. As an evidence, the verification methods typically ensure that `Verifier.nondetString()` never returns null, as documented in [issue &#35;1438](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/issues/1438).
+<span id="verifier">It's worth noting that the **SV-COMP** community and **SOSY-Labs** developers have intentionally made their benchmarks to avoid *null pointer exception detection* scenarios. As an evidence, the verification methods typically ensure that `Verifier.nondetString()` never returns null, as documented in [issue &#35;1438](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/issues/1438).</span>
 
 <br>
 
@@ -384,7 +384,7 @@ String arg = "WORLD";
 
 <h4>A new config flag</h4>
 
-A new configuration flag **`nullPointer.Exception`** was added to SPF. When enabled (*true*), the **Choice 0** for null checks on symbolic strings will be explored, followed by Choice 1 and Choice 2 for the above mentioned string methods. When disabled (*false*), only the two choices will run, skipping the **Choice 0** of null check, by default the flag is passed in the **sv-comp script** as *false*, see this [section.](https://github.com/saifk16/spf-logs/blob/c759b11a43c5ba7c9329cae2066aa690f6b234b3/Support_For_RuntimeException_In_SPF_GSoC_2025.md?plain=1#L316)
+A new configuration flag **`nullPointer.Exception`** was added to SPF. When enabled (*true*), the **Choice 0** for null checks on symbolic strings will be explored, followed by Choice 1 and Choice 2 for the above mentioned string methods. When disabled (*false*), only the two choices will run, skipping the **Choice 0** of null check, by default the flag is passed in the **sv-comp script** as *false*, see the last paragraph in this [section.](#verifier)
 
 <br>
 
