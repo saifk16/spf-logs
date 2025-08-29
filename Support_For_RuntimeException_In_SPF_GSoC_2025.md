@@ -456,6 +456,8 @@ Enhanced behavior for charAt() (3 execution paths):
 - Path 2: index is greater than or equal to string **str** length (StringIndexOutOfBoundsException is thrown)
 - Path 3: index is in the bound range and operation executes successfully
 
+<br>
+
 Enhanced behavior for substring(beginIndex) (3 execution paths):
 
 - Path 1: beginIndex is negative (StringIndexOutOfBoundsException is thrown)
@@ -519,7 +521,7 @@ These many things were supported in this pr, you can see the test cases added in
 
 <br>
 
-### SV-COMP Execution Script Enhancements
+### 3. SV-COMP Execution Script Enhancements
 
 The SV-COMP execution script was enhanced to properly handle different types of properties and exceptions.  
 The refined script introduces **intelligent property detection** and appropriate configuration based on the property file content.
@@ -546,8 +548,7 @@ if [ $? -eq 0 ]; then
 fi
 ```
 
-- **Dynamic exception handling**: The script automatically detects whether the property file contains assertion-based properties or runtime exception properties.  
-- **Conditional configuration**: Based on detection, it sets appropriate SPF configuration flags like `runtime.exception` and `search.multiple_errors`. As discussed earlier in **Assertion Mode** these flags are set to *false*, but *true* in the case of **RuntimeException Mode**
+The script detects whether the property file contains assertion-based properties or runtime exception properties. Based on detection, it sets appropriate SPF configuration flags like `runtime.exception` and `search.multiple_errors`. As discussed earlier in **Assertion Mode** these flags are set to *false*, but *true* in the case of **RuntimeException Mode**
 
 In runtime exception mode, the script:
 
@@ -568,7 +569,9 @@ This script refinement was crucial for proper integration with SV-COMP benchmark
 
 <br>
 
-### Math.max() and Math.min() Improvements (PR &#35;111 - MERGED)
+### Other Contribution
+
+#### Math.max() and Math.min() Improvements (PR &#35;111 - MERGED)
 
 A significant improvement was made to the `Math.max()` and `Math.min()` methods in SPF to handle **edge cases** correctly, particularly for floating-point operations.  
 The enhanced implementation now properly handles:
