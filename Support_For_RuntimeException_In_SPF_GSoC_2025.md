@@ -378,9 +378,13 @@ String arg = "WORLD";
 ```
 
 > [!NOTE]
-> The above cases will work the same for all string methods, and the **Case 4** will not be handled symbolically, as it has nothing smybolic in it. For the ***equals() method***, when we call it on a concrete value and the argument passed is symbolic (which can be null), `HELLO.equals(str)`, it will not throw a **NullPointerException** because ***equals() method*** works differently in string case, it compares the content not the object reference.
+> The above cases will work the same for all string methods, and the **Case 4** will not be handled symbolically, as it has nothing smybolic in it. For the ***equals() method***, when we call it on a concrete value and the argument passed is symbolic (which can be null), `HELLO.equals(str)`, it will not throw a **NullPointerException** because ***equals() method*** works differently in string case, it compares the content not the object reference. So if **str** is **null** then ***equals() method*** will return **false.**
 
-After this a flag `nullPointer.Exception` was added in SPF so the choice 0, i.e., for the null check can be skipped for now, but this support or code change will help the users of **SPF**, as a **symbolic string** can be **null** as well.
+<br>
+
+<h4>A new config flag</h4>
+
+A new configuration flag **nullPointer.Exception** was added to SPF. When enabled (*true*), the **Choice 0** for null checks on symbolic strings will be explored, followed by Choice 1 and Choice 2 for the above mentioned string methods. When disabled (*false*), only the two choices will run, skipping the **Choice 0** of null check, by default the flag is passed in the **sv-comp script** as *false*, see this [section]()
 
 <br>
 
