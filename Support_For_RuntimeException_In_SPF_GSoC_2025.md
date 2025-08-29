@@ -121,12 +121,12 @@ The goal in this project was to add support for raising **runtime exceptions** l
   <tr>
     <td><b>NullPointerException</b></td>
     <td>contains(), equals(), startsWith(), endsWith(), isEmpty()</td>
-    <td>See this section for details</td>
+    <td>See <a href="#1-nullpointerexception-support-pr-120---merged">this section</a> for details</td>
   </tr>
   <tr>
     <td><b>StringIndexOutOfBoundsException</b></td>
     <td>charAt(), subString(beginIndex), subString(beginIndex, endIndex)</td>
-    <td>See this section for details</td>
+    <td>See <a href="#2-stringindexoutofboundsexception-support-pr-133---open">this section</a> for details</td>
   </tr>
   <tr>
     <td><b>NumberFormatException</b></td>
@@ -450,13 +450,13 @@ Earlier we only had one choice:
 
 But there should be additional choices as well because the index can be invalid, so we need to add other choices for these cases in the ***SymbolicStringHandler*** in the method **handleCharAt()**, **handleSubString1()** and **handleSubString2().**
 
+<br>
+
 Enhanced behavior for charAt() (3 execution paths):
 
 - Path 1: index is negative (StringIndexOutOfBoundsException is thrown)
 - Path 2: index is greater than or equal to string **str** length (StringIndexOutOfBoundsException is thrown)
 - Path 3: index is in the bound range and operation executes successfully
-
-<br>
 
 Enhanced behavior for substring(beginIndex) (3 execution paths):
 
@@ -478,6 +478,8 @@ Enhanced behavior for substring(beginIndex, endIndex) (6 execution paths):
 <h4>Variations of test cases</h4>
 
 We can test various combinations of symbolic and concrete values for both strings and indices. A single index passed to the mentioned methods can be either symbolic or concrete. Similarly, for the substring(beginIndex, endIndex) case, both indices can be symbolic, or either one of them can be symbolic. When the index or indices are concrete but the str is symbolic, SPF will still explore symbolically. If nothing is symbolic (both string and indices are concrete), SPF will not explore symbolically.
+
+Also in **charAt** we can also have a variable of **StringBuilder** type in SPF, so we first need to check what type of expression it is.
 
 ```java
 // Case 1: Both string and index are symbolic
@@ -505,7 +507,12 @@ int endIndex = Verifier.nondetInt();
 String str = "HELLO";
 int beginIndex = Verifier.nondetInt();
 int endIndex = 3;
+
+// Case 7: StringBuiler charAT
+StringBuilder sb = new StringBuilder(Verifier.nondetString());
+assert sb.charAt(0) == sb.charAt(5);
 ```
+
 <br>
 
 <h4>A new config flag </h4>
@@ -569,14 +576,14 @@ This script refinement was crucial for proper integration with SV-COMP benchmark
 
 <br>
 
-### Other Contribution
+### 4. Other Contribution
 
 #### Math.max() and Math.min() Improvements (PR &#35;111 - MERGED)
 
 A significant improvement was made to the `Math.max()` and `Math.min()` methods in SPF to handle **edge cases** correctly, particularly for floating-point operations.  
 The enhanced implementation now properly handles:
 
-### Special Cases Handled
+##### Special Cases Handled
 - **NaN (Not a Number):** Both `Double.NaN` and `Float.NaN`  
 - **Signed zeros:** Correct handling of `0.0` and `-0.0` for both `double` and `float` types  
 - **IEEE 754 compliance:** Ensures results match standard Java behavior
@@ -586,17 +593,49 @@ The enhanced implementation now properly handles:
 
 <br>
 
-
-
 <h2 id="#Future">Future Work</h2>
 
-NumberFormatException is not supported in this project because of no support for the parseFloat and parseDouble methods in **SPF**, however in 2022 a contributor added partial support to parseInt and ISINTEGER comparator, in the same way we can support the ISFLOAT and ISDOUBLE using the SMT Lib floating point theory as both float and double are floating point numbers in java.
+While significant progress has been made in supporting runtime exceptions in SPF, there are several areas that present opportunities for future development and enhancement:
+
+**NumberFormatException** support was not implemented in this project due to the lack of support for **parseFloat()** and **parseDouble()** methods in SPF. However, building on the foundation laid by a 2022 contributor who added partial support for **parseInt()** and the **ISINTEGER** comparator, future work could include:
+
+- Adding support for **parseFloat()** and **parseDouble()** methods in the **SymbolicStringHandler** with the **ISFLOAT** and **ISDOUBLE** comparator
+- **setCharAt()** method support for **StringIndexOutOfBoundsException** scenarios, we can make use of already implemented methods like **charAt**
+
+> [!NOTE]
+> You can see this [file](https://docs.google.com/spreadsheets/d/1yb73SzwV9_r5G7EP_iMi_xpUM_o7eOQkojBOJFN9LvY/edit?usp=sharing), which includes the **The 19 False Verdict Verification Tasks (Runtime Exception Set)** and it is mentioned what is done, what was already present and what is left.
 
 <br>
 
 <h2>Conclusion</h2>
 
+The **Google Summer of Code 2025** project **"Support Runtime Exceptions in SPF"** is what I chose to contribute at this summer, resulting in significant improvements to the Symbolic PathFinder (SPF) tool.  
+This project has substantially enhanced SPF's capability to handle runtime exceptions, leading to a remarkable improvement in **SV-COMP benchmark scores**.
 
+The most notable achievement was the improvement in **SV-COMP Runtime Exception benchmark scores**, with the overall score increasing **from -3906 to 910** (maximum possible: 1327).  
+
+This improvement was achieved through:
+- Reducing incorrect results from **278 → 2**
+- Increasing correct classifications from **275 → 492**
+- Completely eliminating incorrect false results from **278 → 0**
+
+This GSoC experience has been transformative for my **programming** and **software engineering** skills. The first month presented significant challenges as I grappled with the complexity of symbolic execution.
+However, with the invaluable guidance of my mentors **Soha Hussein** and **Yannic Nohller**, I was able to overcome initial hurdles and develop a deep understanding of the codebase.
+
+A particularly helpful resource during the challenging early phase was the foundational article:  
+**"Symbolic PathFinder: Integrating symbolic execution with model checking for Java bytecode analysis"**, which provided crucial insights into SPF's architecture and methodology.
+
+#### Note of Thanks
+
+I extend my heartfelt gratitude to my mentors **Soha Hussein** and **Yannic Nohller** for their exceptional guidance, patience, and technical expertise throughout this journey.  
+Their support was instrumental in helping me navigate the complexities of symbolic execution and achieve the project goals.
+
+I am deeply grateful to **Google Summer of Code 2025** and **The JPF Team** for providing this incredible opportunity to contribute to such an impactful open-source project.  
+This experience has not only enhanced my technical skills but also deepened my understanding of **software verification** and **symbolic execution**.
+
+Special thanks to the broader **JPF and SPF community** for their welcoming environment and collaborative spirit, which made this contribution possible.
+
+---
 
 
 
