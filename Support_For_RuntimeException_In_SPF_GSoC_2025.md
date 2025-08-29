@@ -84,7 +84,7 @@ A set of quick links are provided below for easy reference. For more information
   <td>
     <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/111">
     &#35;111</a> (Merged), 
-    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">&#35;120</a> (Merged)
+    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">&#35;120</a> (Merged), 
     <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/133">&#35;133</a> (Under Review)
   </td>
 </tr>
@@ -384,7 +384,7 @@ String arg = "WORLD";
 
 <h4>A new config flag</h4>
 
-A new configuration flag **nullPointer.Exception** was added to SPF. When enabled (*true*), the **Choice 0** for null checks on symbolic strings will be explored, followed by Choice 1 and Choice 2 for the above mentioned string methods. When disabled (*false*), only the two choices will run, skipping the **Choice 0** of null check, by default the flag is passed in the **sv-comp script** as *false*, see this [section]()
+A new configuration flag **`nullPointer.Exception`** was added to SPF. When enabled (*true*), the **Choice 0** for null checks on symbolic strings will be explored, followed by Choice 1 and Choice 2 for the above mentioned string methods. When disabled (*false*), only the two choices will run, skipping the **Choice 0** of null check, by default the flag is passed in the **sv-comp script** as *false*, see this [section.](https://github.com/saifk16/spf-logs/blob/c759b11a43c5ba7c9329cae2066aa690f6b234b3/Support_For_RuntimeException_In_SPF_GSoC_2025.md?plain=1#L316)
 
 <br>
 
