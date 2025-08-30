@@ -12,6 +12,15 @@
 
 <br>
 
+<div align="center">
+  <img src="spf.png" width="100">
+</div>
+
+
+<h2 align="center"><a href="https://github.com/SymbolicPathFinder">Symbolic Pathfinder</a></h2>
+
+<br>
+
 <h1> Contributor Info </h1>
 
 <table cellspacing="0" cellpadding="8" align="center">
