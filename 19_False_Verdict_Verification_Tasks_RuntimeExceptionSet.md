@@ -1,7 +1,7 @@
 # Benchmark Test Results
 
 | # | Benchmark Tasks/Tests | GDART | JBMC | Verdicts by jbmc and gdart | Actual Verdict | Reason | Support SPF | What do we print in SPF |
-|---|---|---|---|--------|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 | 1 | StringValueOf03.yml | Stringindexoutofbounds | Stringindexoutofbounds | for both correct-unconfirmed - false | FALSE | because of charAt() | done | FALSE |
 | 2 | StringBuilderChars05.yml | Stringindexoutofbounds | Stringindexoutofbounds | for both FALSE | FALSE | because of setCharAt() | left | unknown |
 | 3 | StringBuilderChars03.yml | Stringindexoutofbounds | NO EXCEPTION | true for jbmc and false (correct-unconfirmed for gdart) | FALSE | because of charAt() | done | FALSE |
@@ -25,24 +25,14 @@
 ## Summary Statistics
 
 - **Total Test Cases**: 19
-- **All Actual Verdicts**: FALSE (except URLDecoder tests show TRUE in SPF column)
-- **Common Exception Types**:
-  - String/Array Index Out of Bounds: 8 cases
-  - Null Pointer Exception: 3 cases
-  - Number Format Exception: 2 cases
-  - Unsupported Operation Exception: 3 cases
-  - Other: 3 cases
+- **All Actual Verdicts**: FALSE in the RuntimeException Mode
 
-## Tool Performance Overview
 
 ### GDART Results:
-- Successful detection: 13 cases
-- Unknown: 3 cases  
-- Timeout: 3 cases
+https://sv-comp.sosy-lab.org/2025/results/results-verified/gdart.2024-12-05_09-57-26.results.SV-COMP25_runtime-exception.RuntimeException-Java.xml.bz2.fixed.xml.bz2.table.html#/
 
 ### JBMC Results:
-- Successful detection: 13 cases
-- Error(42): 6 cases
+https://sv-comp.sosy-lab.org/2025/results/results-verified/jbmc.2024-12-05_11-32-28.results.SV-COMP25_runtime-exception.RuntimeException-Java.xml.bz2.fixed.xml.bz2.table.html#/
 
 ### SPF Support Status:
 - Done: 8 cases
