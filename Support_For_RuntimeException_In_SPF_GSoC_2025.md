@@ -8,17 +8,14 @@
   <tr>
     <td align="center" style="padding: 20px;">
       <img src="jpf.png" width="150"><br>
-      <h2>THE JPF TEAM</h2>
+      <h3>THE JPF TEAM</h3>
     </td>
     <td align="center" style="padding: 20px;">
-      <img src="spf.png" width="100"><br>
-      <h2><a href="https://github.com/SymbolicPathFinder">Symbolic Pathfinder</a></h2>
+      <img src="spf.png" width="150"><br>
+      <h3><a href="https://github.com/SymbolicPathFinder">Symbolic Pathfinder</a></h3>
     </td>
   </tr>
 </table>
-
-
-<h2 align="center"><a href="https://github.com/SymbolicPathFinder">Symbolic Pathfinder</a></h2>
 
 <br>
 <br>
