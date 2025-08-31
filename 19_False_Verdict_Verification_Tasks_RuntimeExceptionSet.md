@@ -34,7 +34,7 @@
 ### JBMC Results:
 [See here](https://sv-comp.sosy-lab.org/2025/results/results-verified/jbmc.2024-12-05_11-32-28.results.SV-COMP25_runtime-exception.RuntimeException-Java.xml.bz2.fixed.xml.bz2.table.html#/table?filter=id(values(,false)))
 
-### SPF Support Status:
-- Done: 8 cases
-- Already: 3 cases
-- Left: 8 cases
+### SPF Results:
+[See here](/logs/SPF-2.0/Date-26Aug/runtime-exception/spf.2025-08-26_03-20-08.results.SV-COMP25_runtime-exception.RuntimeException-Java.html)
+
+Add this in the end - `table?filter=id(values(,false))`
