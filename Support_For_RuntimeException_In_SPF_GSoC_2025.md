@@ -115,10 +115,11 @@ This improvement was achieved through:
 - Reducing incorrect results from **278 → 2**
 - Increasing correct classifications from **275 → 492**
 - Completely eliminating incorrect false results from **278 → 0**
+- `2` is for the incorrect true results, [see logs](/logs/SPF-2.0/Date-26Aug/runtime-exception/)
 
 <br>
 
-<h2>Introduction</h2>
+<h3>About JPF and SPF</h3>
 
 **Java Pathfinder (JPF)** is a Java bytecode analysis tool mostly used for **[model checking](https://github.com/javapathfinder/jpf-core/wiki/Testing-vs.-Model-Checking)** written in Java. It does not execute a program like a normal JVM, it systematically explores all possible execution paths to check for errors, deadlocks, and unhandled exceptions. JPF was started as a model checker around 1999 and was developed at the NASA Ames Research Center. 
 
@@ -299,13 +300,17 @@ The results demonstrate a significant improvement in SPF's performance with the 
 
 The improvements are visible in the overall score, which increased from `-3906` to `910` max being `1327`. This substantial change can be attributed to several key factors:
 
-- **Dramatic reduction in incorrect results:** The incorrect results dropped from `278` to just `2`, with *incorrect false* being dropped from `278` to `0`.
+- **Reduction in incorrect results:** The incorrect results dropped from `278` to just `2`, with *incorrect false* being dropped from `278` to `0`.
 - **Significant increase in correct classifications:** Correct results improved from `275` to `492`.
 - **Script refinements and solver improvements:** The sv-comp script was significantly refined, and crucially, we not only used the **Z3 bitvector solver** but also the **Z3str3** for string operations (solving). This change was implemented by adding the configuration:
 
 ```bash
 echo "symbolic.string_dp=z3str3" >> $DIR/config.jpf
 ```
+
+<br>
+
+For the **ReachSafety** benchmarks, you can observe slight improvements in the results, with the score improving from `-606` to `-571` and a small reduction in incorrect results from `46` to `40`, unknowns from `120` to `172`. These modest changes are primarily attributed to the same script refinements and solver improvements (Z3str3 addition) mentioned above, rather than any runtime exception support additions. These benchmarks focus purely on assertion-based reachability.
 
 <br>
 
@@ -319,8 +324,6 @@ The addition of **Z3str3** significantly improved the ability to handle string-r
 
 - Unsupported string operations
 - Unknown constants or symbolic methods that are not yet handled.
-
-For the **ReachSafety** benchmarks, you can observe slight improvements in the results, with the score improving from `-606` to `-571` and a small reduction in incorrect results from `46` to `40`, unknowns from `120` to `172`. These modest changes are primarily attributed to the same script refinements and solver improvements (Z3str3 addition) mentioned above, rather than any runtime exception support additions. These benchmarks focus purely on assertion-based reachability.
 
 <br>
 
