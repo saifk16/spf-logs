@@ -10,8 +10,8 @@
       <img src="jpf.png" width="150"><br>
       <h3>THE JPF TEAM</h3>
     </td>
-    <td>
-      <br><img src="spf.png" width="150"><br>
+    <td align="center">
+      <br><img src="spf.png" width="150">
       <h3><a href="https://github.com/SymbolicPathFinder">Symbolic Pathfinder</a></h3>
     </td>
   </tr>
