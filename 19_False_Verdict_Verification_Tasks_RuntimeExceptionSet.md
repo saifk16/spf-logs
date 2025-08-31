@@ -29,10 +29,10 @@
 
 
 ### GDART Results:
-https://sv-comp.sosy-lab.org/2025/results/results-verified/gdart.2024-12-05_09-57-26.results.SV-COMP25_runtime-exception.RuntimeException-Java.xml.bz2.fixed.xml.bz2.table.html#/
+https://sv-comp.sosy-lab.org/2025/results/results-verified/gdart.2024-12-05_09-57-26.results.SV-COMP25_runtime-exception.RuntimeException-Java.xml.bz2.fixed.xml.bz2.table.html#/table?filter=id(values(,false))
 
 ### JBMC Results:
-https://sv-comp.sosy-lab.org/2025/results/results-verified/jbmc.2024-12-05_11-32-28.results.SV-COMP25_runtime-exception.RuntimeException-Java.xml.bz2.fixed.xml.bz2.table.html#/
+https://sv-comp.sosy-lab.org/2025/results/results-verified/jbmc.2024-12-05_11-32-28.results.SV-COMP25_runtime-exception.RuntimeException-Java.xml.bz2.fixed.xml.bz2.table.html#/table?filter=id(values(,false))
 
 ### SPF Support Status:
 - Done: 8 cases
