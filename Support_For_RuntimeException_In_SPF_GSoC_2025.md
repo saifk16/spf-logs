@@ -548,8 +548,6 @@ These many things were supported in this pr, you can see the test cases added in
 The SV-COMP execution script was enhanced to properly handle different types of properties and exceptions.  
 The refined script introduces **intelligent property detection** and appropriate configuration based on the property file content.
 
----
-
 #### Key Script Improvements
 
 The enhanced script analyzes the property file to determine the execution mode:
