@@ -4,17 +4,18 @@
 
 <h1 align="center"> FINAL REPORT (GSoC 2025) </h1>
 
-<div align="center">
-  <img src="jpf.png" width="150">
-</div>
-
-<h2 align="center">THE JPF TEAM</h2>
-
-<br>
-
-<div align="center">
-  <img src="spf.png" width="100">
-</div>
+<table align="center">
+  <tr>
+    <td align="center" style="padding: 20px;">
+      <img src="jpf.png" width="150"><br>
+      <h2>THE JPF TEAM</h2>
+    </td>
+    <td align="center" style="padding: 20px;">
+      <img src="spf.png" width="100"><br>
+      <h2><a href="https://github.com/SymbolicPathFinder">Symbolic Pathfinder</a></h2>
+    </td>
+  </tr>
+</table>
 
 
 <h2 align="center"><a href="https://github.com/SymbolicPathFinder">Symbolic Pathfinder</a></h2>
