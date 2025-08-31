@@ -1,7 +1,7 @@
 # Benchmark Test Results
 
 | # | Benchmark Tasks/Tests | GDART | JBMC | Verdicts by jbmc and gdart | Actual Verdict | Reason | Support SPF | What do we print in SPF |
-|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|--------|---|---|---|---|
 | 1 | StringValueOf03.yml | Stringindexoutofbounds | Stringindexoutofbounds | for both correct-unconfirmed - false | FALSE | because of charAt() | done | FALSE |
 | 2 | StringBuilderChars05.yml | Stringindexoutofbounds | Stringindexoutofbounds | for both FALSE | FALSE | because of setCharAt() | left | unknown |
 | 3 | StringBuilderChars03.yml | Stringindexoutofbounds | NO EXCEPTION | true for jbmc and false (correct-unconfirmed for gdart) | FALSE | because of charAt() | done | FALSE |
