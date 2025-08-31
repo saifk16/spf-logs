@@ -8,7 +8,7 @@
   <tr>
     <td>
       <img src="jpf.png" width="150"><br>
-      <h3>THE JPF TEAM</h3>
+      <h3><a href="https://summerofcode.withgoogle.com/programs/2025/organizations/the-jpf-team-hg">The JPF team</a></h3>
     </td>
     <td align="center">
       <br><img src="spf.png" width="125">
