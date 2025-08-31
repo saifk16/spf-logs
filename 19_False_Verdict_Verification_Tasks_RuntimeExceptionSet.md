@@ -1,6 +1,6 @@
 # Benchmark Test Results
 
-| # | Benchmark Tasks/Tests | GDART | JBMC | Verdicts by jbmc and gdart | Actual Verdict | Reason | Support SPF | What do we print in SPF |
+| # | Benchmark Tasks/Tests | GDART | JBMC | Verdicts by jbmc and gdart | Actual Verdict | Reason | Support in SPF | What do we print in SPF |
 |---|---|---|---|---|---|---|---|---|
 | 1 | StringValueOf03.yml | Stringindexoutofbounds | Stringindexoutofbounds | for both correct-unconfirmed - false | FALSE | because of charAt() | done | FALSE |
 | 2 | StringBuilderChars05.yml | Stringindexoutofbounds | Stringindexoutofbounds | for both FALSE | FALSE | because of setCharAt() | left | unknown |
@@ -37,4 +37,15 @@
 ### SPF Results:
 [See here](/logs/SPF-2.0/Date-26Aug/runtime-exception/spf.2025-08-26_03-20-08.results.SV-COMP25_runtime-exception.RuntimeException-Java.html)
 
-Add this in the end - `table?filter=id(values(,false))`
+Add this in the end - `table?filter=id(values(,false))` after you download the above result file (html).
+
+### Some Comments
+
+Please note that `Support in SPF` has:
+- done
+- left
+- already
+
+***done*** means the support that was added in GSoC 2025 under the project **Support RuntimeException in SPF**
+
+***left*** means that the support is still not there in SPF, and will be added in future, [see here](Support_For_RuntimeException_In_SPF_GSoC_2025.md#future-work)
