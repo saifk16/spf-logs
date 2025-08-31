@@ -7,7 +7,7 @@
 <table align="center">
   <tr>
     <td>
-      <br><img src="jpf.png" width="125">
+      <img src="jpf.png" width="150"><br>
       <h3 align="center"><a href="https://summerofcode.withgoogle.com/programs/2025/organizations/the-jpf-team-hg">The JPF team</a></h3>
     </td>
     <td align="center">
