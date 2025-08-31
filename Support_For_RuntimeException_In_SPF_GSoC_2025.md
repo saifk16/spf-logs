@@ -107,6 +107,17 @@ A set of quick links are provided below for easy reference. For more information
 
 <br>
 
+This project has substantially enhanced SPF's capability to handle runtime exceptions, leading to a remarkable improvement in **SV-COMP benchmark scores**.
+
+The most notable achievement was the improvement in **SV-COMP Runtime Exception benchmark scores**, with the overall score increasing **from -3906 to 910** (maximum possible: 1327).  
+
+This improvement was achieved through:
+- Reducing incorrect results from **278 → 2**
+- Increasing correct classifications from **275 → 492**
+- Completely eliminating incorrect false results from **278 → 0**
+
+<br>
+
 <h2>Introduction</h2>
 
 **Java Pathfinder (JPF)** is a Java bytecode analysis tool mostly used for **[model checking](https://github.com/javapathfinder/jpf-core/wiki/Testing-vs.-Model-Checking)** written in Java. It does not execute a program like a normal JVM, it systematically explores all possible execution paths to check for errors, deadlocks, and unhandled exceptions. JPF was started as a model checker around 1999 and was developed at the NASA Ames Research Center. 
@@ -623,17 +634,8 @@ While significant progress has been made in supporting runtime exceptions in SPF
 <h2>Conclusion</h2>
 
 The **Google Summer of Code 2025** project **"Support Runtime Exceptions in SPF"** is what I chose to contribute at this summer, resulting in significant improvements to the Symbolic PathFinder (SPF) tool.  
-This project has substantially enhanced SPF's capability to handle runtime exceptions, leading to a remarkable improvement in **SV-COMP benchmark scores**.
-
-The most notable achievement was the improvement in **SV-COMP Runtime Exception benchmark scores**, with the overall score increasing **from -3906 to 910** (maximum possible: 1327).  
-
-This improvement was achieved through:
-- Reducing incorrect results from **278 → 2**
-- Increasing correct classifications from **275 → 492**
-- Completely eliminating incorrect false results from **278 → 0**
 
 This GSoC experience has been transformative for my **programming** and **software engineering** skills. The first month presented significant challenges as I grappled with the complexity of symbolic execution.
-However, with the invaluable guidance of my mentors **Soha Hussein** and **Yannic Nohller**, I was able to overcome initial hurdles and develop a deep understanding of the codebase.
 
 A particularly helpful resource during the challenging early phase was the foundational article:  
 **"Symbolic PathFinder: Integrating symbolic execution with model checking for Java bytecode analysis"**, which provided crucial insights into SPF's architecture and methodology.
@@ -644,7 +646,7 @@ I extend my heartfelt gratitude to my mentors **Soha Hussein** and **Yannic Nohl
 Their support was instrumental in helping me navigate the complexities of symbolic execution and achieve the project goals.
 
 I am deeply grateful to **Google Summer of Code 2025** and **The JPF Team** for providing this incredible opportunity to contribute to such an impactful open-source project.  
-This experience has not only enhanced my technical skills but also deepened my understanding of **software verification** and **symbolic execution**.
+This experience has not only enhanced my technical skills but also deepened my understanding of **software verification**, **symbolic execution** and **Symbolic Pathfinder**.
 
 Special thanks to the broader **JPF and SPF community** for their welcoming environment and collaborative spirit, which made this contribution possible.
 
