@@ -20,8 +20,11 @@
 <h2 align="center"><a href="https://github.com/SymbolicPathFinder">Symbolic Pathfinder</a></h2>
 
 <br>
+<br>
 
-<h1> Contributor Info </h1>
+<h1 align="center">Support Runtime Exceptions in SPF</h1>
+
+<h2> Contributor Info </h1>
 
 <table cellspacing="0" cellpadding="8" align="center">
   <tr>
@@ -57,11 +60,6 @@
     <td>Jun' 2025 to Sept' 2025</td>
   </tr>
 </table>
-
-<br>
-<br>
-
-<h1 align="center">Support Runtime Exceptions in SPF</h1>
 
 <br>
 
