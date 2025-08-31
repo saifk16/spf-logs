@@ -6,12 +6,12 @@
 
 <table align="center">
   <tr>
-    <td align="center" style="padding: 20px;">
+    <td>
       <img src="jpf.png" width="150"><br>
       <h3>THE JPF TEAM</h3>
     </td>
-    <td align="center" style="padding: 20px;">
-      <img src="spf.png" width="150"><br>
+    <td>
+      <br><img src="spf.png" width="150"><br>
       <h3><a href="https://github.com/SymbolicPathFinder">Symbolic Pathfinder</a></h3>
     </td>
   </tr>
