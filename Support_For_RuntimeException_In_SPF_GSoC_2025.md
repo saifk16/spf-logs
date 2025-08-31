@@ -93,7 +93,7 @@ A set of quick links are provided below for easy reference. For more information
   </tr>
    <tr>
     <td><b>19 False Verdict Verification Tasks (Runtime Exception Set)</b></td>
-    <td><a href="https://docs.google.com/spreadsheets/d/1yb73SzwV9_r5G7EP_iMi_xpUM_o7eOQkojBOJFN9LvY/edit?usp=sharing">Spread Sheet URL</a></td>
+    <td><a href="19_False_Verdict_Verification_Tasks_RuntimeExceptionSet.md">See here</a></td>
   </tr>
 <tr>
   <td><b>Pull Requests</b></td>
