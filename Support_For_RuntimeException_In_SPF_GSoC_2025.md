@@ -1,6 +1,7 @@
 ![Google Summer of Code](GSoC_Logo.png)
 
 <br>
+<br>
 
 <h1 align="center"> FINAL REPORT (GSoC 2025) </h1>
 
