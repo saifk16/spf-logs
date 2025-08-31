@@ -11,11 +11,11 @@
   <tr>
     <td>
       <img src="jpf.png" width="150"><br>
-      <h3 align="center"><a href="https://summerofcode.withgoogle.com/programs/2025/organizations/the-jpf-team-hg">The JPF team</a></h3>
+      <h3 align="center"><a href="https://summerofcode.withgoogle.com/programs/2025/organizations/the-jpf-team-hg" target="_blank">The JPF team</a></h3>
     </td>
     <td align="center">
       <br><img src="spf.png" width="125">
-      <h3 align="center"><a href="https://github.com/SymbolicPathFinder">Symbolic Pathfinder</a></h3>
+      <h3 align="center"><a href="https://github.com/SymbolicPathFinder" target="_blank">Symbolic Pathfinder</a></h3>
     </td>
   </tr>
 </table>
@@ -37,7 +37,7 @@
   </tr>
   <tr>
     <td><b>GitHub</b></td>
-    <td><a href="https://github.com/saifk16">saifk16</a></td>
+    <td><a href="https://github.com/saifk16" target="_blank">saifk16</a></td>
   </tr>
   <tr>
     <td><b>Email</b></td>
@@ -45,7 +45,7 @@
   </tr>
   <tr>
     <td><b>Organization</b></td>
-    <td><a href="https://github.com/javapathfinder/jpf-core/wiki">The JPF Team</a></td>
+    <td><a href="https://github.com/javapathfinder/jpf-core/wiki" target="_blank">The JPF Team</a></td>
   </tr>
   <tr>
     <td><b>Mentors</b></td>
@@ -53,7 +53,7 @@
   </tr>
   <tr>
     <td><b>Project</b></td>
-    <td><a href="https://github.com/javapathfinder/jpf-core/wiki/GSoC-2025-Project-Ideas#runtime-exception-in-spf">Support Runtime Exceptions in SPF</a></td>
+    <td><a href="https://github.com/javapathfinder/jpf-core/wiki/GSoC-2025-Project-Ideas#runtime-exception-in-spf" target="_blank">Support Runtime Exceptions in SPF</a></td>
   </tr>
   <tr>
     <td><b>Project Difficulty</b></td>
@@ -77,31 +77,30 @@ A set of quick links are provided below for easy reference. For more information
 <table cellspacing="0" cellpadding="8" align="center">
   <tr>
     <td><b>Java Pathfinder</b></td>
-    <td><a href="https://github.com/javapathfinder/jpf-core/wiki/">Wiki</a></td>
+    <td><a href="https://github.com/javapathfinder/jpf-core/wiki/" target="_blank">Wiki</a></td>
   </tr>
   <tr>
     <td><b>Symbolic Pathfinder</b></td>
-    <td><a href="https://github.com/SymbolicPathFinder/jpf-symbc/wiki">Wiki</a></td>
+    <td><a href="https://github.com/SymbolicPathFinder/jpf-symbc/wiki" target="_blank">Wiki</a></td>
   </tr>
   <tr>
     <td><b>Code Repository</b></td>
-    <td><a href="https://github.com/saifk16/jpf-symbc">url</a></td>
+    <td><a href="https://github.com/saifk16/jpf-symbc" target="_blank">url</a></td>
   </tr>
   <tr>
     <td><b>SPF Article</b></td>
-    <td><a href="https://www.researchgate.net/publication/257522893_Symbolic_PathFinder_Integrating_symbolic_execution_with_model_checking_for_Java_bytecode_analysis">Symbolic PathFinder: Integrating symbolic execution with model checking for Java bytecode analysis</a></td>
+    <td><a href="https://www.researchgate.net/publication/257522893_Symbolic_PathFinder_Integrating_symbolic_execution_with_model_checking_for_Java_bytecode_analysis" target="_blank">Symbolic PathFinder: Integrating symbolic execution with model checking for Java bytecode analysis</a></td>
   </tr>
    <tr>
     <td><b>19 False Verdict Verification Tasks (Runtime Exception Set)</b></td>
-    <td><a href="19_False_Verdict_Verification_Tasks_RuntimeExceptionSet.md">See here</a></td>
+    <td><a href="19_False_Verdict_Verification_Tasks_RuntimeExceptionSet.md" target="_blank">See here</a></td>
   </tr>
 <tr>
   <td><b>Pull Requests</b></td>
   <td>
-    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/111">
-    &#35;111</a> (Merged), 
-    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">&#35;120</a> (Merged), 
-    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/133">&#35;133</a> (Under Review)
+    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/111" target="_blank">&#35;111</a> (Merged), 
+    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120" target="_blank">&#35;120</a> (Merged), 
+    <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/133" target="_blank">&#35;133</a> (Under Review)
   </td>
 </tr>
 </table>
@@ -137,16 +136,16 @@ The goal in this project was to add support for raising **runtime exceptions** l
   <tr>
     <td><b>NullPointerException</b></td>
     <td>contains(), equals(), startsWith(), endsWith(), isEmpty()</td>
-    <td>See <a href="#1-nullpointerexception-support-pr-120---merged">this section</a> for details</td>
+    <td>See <a href="#1-nullpointerexception-support-pr-120---merged" target="_blank">this section</a> for details</td>
   </tr>
   <tr>
     <td><b>StringIndexOutOfBoundsException</b></td>
     <td>charAt(), subString(beginIndex), subString(beginIndex, endIndex)</td>
-    <td>See <a href="#2-stringindexoutofboundsexception-support-pr-133---open">this section</a> for details</td>
+    <td>See <a href="#2-stringindexoutofboundsexception-support-pr-133---open" target="_blank">this section</a> for details</td>
   </tr>
   <tr>
     <td><b>NumberFormatException</b></td>
-    <td><div align="center">----------</div></td>
+    <td><div align="center">Not Supported</div></td>
     <td>See <a href="#Future">this section</a> for details</td>
   </tr>
 </table>
@@ -169,7 +168,7 @@ In addition, by incorporating this support, the project aimed to improve SPF’s
   <tr>
     <td>Runtime Exception Support Version</td>
     <td>SPF-2.0</td>
-    <td><div align="center">-----</div></td>
+    <td><div align="center"><a href="https://github.com/saifk16/jpf-symbc/tree/string-index" target="_blank">GitHub Branch</a></div></td>
   </tr>
 </table>
 
@@ -340,7 +339,7 @@ With those changes, methods like **contains()**, **startsWith()**, **endsWith()*
 
 <br>
 
-<h3>1. NullPointerException Support <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120">(PR &#35;120 - MERGED)</a></h3> 
+<h3>1. NullPointerException Support <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/120" target="_blank">(PR &#35;120 - MERGED)</a></h3> 
 
 NullPointerException is an unchecked exception in Java that occurs when an attempt is made to access methods or properties of an object reference that points to null. In symbolic execution, this is particularly important because symbolic variables can potentially represent null values. The following string methods now properly handle NullPointerException scenarios: 
 
@@ -447,7 +446,7 @@ These many things were supported in this pr, you can see the test cases added in
 
 <br>
 
-<h3>2. StringIndexOutOfBoundsException Support <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/133">(PR &#35;133 - OPEN)</a></h3>
+<h3>2. StringIndexOutOfBoundsException Support <a href="https://github.com/SymbolicPathFinder/jpf-symbc/pull/133" target="_blank">(PR &#35;133 - OPEN)</a></h3>
 
 StringIndexOutOfBoundsException is an unchecked exception in Java that occurs when an attempt is made to access a character at an invalid index in a string. In symbolic execution, this is particularly important because symbolic variables can potentially represent values than can be negative or greater than the length of a string. The following string methods now properly handle StringIndexOutOfBoundsException scenarios:
 
@@ -594,7 +593,7 @@ This script refinement was crucial for proper integration with SV-COMP benchmark
 
 ### 4. Other Contribution
 
-#### Math.max() and Math.min() Improvements (PR &#35;111 - MERGED)
+#### Math.max() and Math.min() Improvements ([PR &#35;111](https://github.com/SymbolicPathFinder/jpf-symbc/pull/111) - MERGED)
 
 A significant improvement was made to the `Math.max()` and `Math.min()` methods in SPF to handle **edge cases** correctly, particularly for floating-point operations.  
 The enhanced implementation now properly handles:
@@ -619,7 +618,7 @@ While significant progress has been made in supporting runtime exceptions in SPF
 - **setCharAt()** method support for **StringIndexOutOfBoundsException** scenarios, we can make use of already implemented methods like **charAt**
 
 > [!NOTE]
-> You can see this [file](https://docs.google.com/spreadsheets/d/1yb73SzwV9_r5G7EP_iMi_xpUM_o7eOQkojBOJFN9LvY/edit?usp=sharing), which includes the **The 19 False Verdict Verification Tasks (Runtime Exception Set)** and it is mentioned what is done, what was already present and what is left.
+> You can see this [file](19_False_Verdict_Verification_Tasks_RuntimeExceptionSet.md), which includes the **The 19 False Verdict Verification Tasks (Runtime Exception Set)** and it is mentioned what is done, what was already present and what is left.
 
 <br>
 
