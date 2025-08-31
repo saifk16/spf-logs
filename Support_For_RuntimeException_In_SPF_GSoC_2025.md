@@ -11,7 +11,7 @@
       <h3>THE JPF TEAM</h3>
     </td>
     <td align="center">
-      <br><img src="spf.png" width="150">
+      <br><img src="spf.png" width="140">
       <h3><a href="https://github.com/SymbolicPathFinder">Symbolic Pathfinder</a></h3>
     </td>
   </tr>
