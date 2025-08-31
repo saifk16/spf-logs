@@ -146,7 +146,7 @@ The goal in this project was to add support for raising **runtime exceptions** l
   <tr>
     <td><b>NumberFormatException</b></td>
     <td><div align="center">Not Supported</div></td>
-    <td>See <a href="#Future">this section</a> for details</td>
+    <td>See <a href="#future-work">this section</a> for details</td>
   </tr>
 </table>
 
@@ -606,7 +606,7 @@ The enhanced implementation now properly handles:
 
 <br>
 
-<h2 id="#Future">Future Work</h2>
+<h2>Future Work</h2>
 
 While significant progress has been made in supporting runtime exceptions in SPF, there are several areas that present opportunities for future development and enhancement:
 
