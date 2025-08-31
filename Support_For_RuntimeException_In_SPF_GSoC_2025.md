@@ -59,8 +59,13 @@
 </table>
 
 <br>
+<br>
 
-<h1>Support Runtime Exceptions in SPF</h1>
+<h1 align="center">Support Runtime Exceptions in SPF</h1>
+
+<br>
+
+<h2>Abstract</h2>
 
 This report presents the progress made on the project **Support Runtime Exceptions in SPF**, carried out under **The JPF Team (The Java Pathfinder Team)** , including improvements in **[SV-COMP](https://sv-comp.sosy-lab.org/2025/index.php)**
  scores, an outline of future work, code contributions, and the challenges encountered. The project was done as a part of **[Google Summer of Code 2025](https://summerofcode.withgoogle.com/)**, where **The JPF Team** participated as an open-source mentoring organization.
