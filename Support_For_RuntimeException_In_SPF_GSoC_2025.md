@@ -119,7 +119,7 @@ This improvement was achieved through:
 
 For reach safety mode you can observe slight changes in the results, with the score improving from `-606` to `-571` and a small reduction in incorrect results from `46` to `40`, unknowns got increased from `120` to `172`.
 
-See this [section](#results-on-sv-comp-benchmarks) for more details
+See this [section](#results-on-sv-comp-benchmarks) for more details on the results.
 
 <br>
 
