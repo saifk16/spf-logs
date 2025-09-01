@@ -197,7 +197,7 @@ A detailed comparison of results before and after adding runtime-exception suppo
 
 <h2>Results on sv-comp benchmarks</h2>
 
-This section summarizes the improvements achieved by adding *runtime exception support* in SPF. The evaluation was conducted on the **SV-COMP Runtime Exception benchmark set** as well as the **ReachSafety benchmark set**. Please see [this](https://gitlab.com/sosy-lab/sv-comp/bench-defs/-/blob/main/benchmark-defs/spf.xml?ref_type=heads) and [this](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/blob/main/java/ReachSafety-Java.set?ref_type=heads).
+This section summarizes the improvements achieved by adding *runtime exception support* in SPF. The evaluation was conducted on the **SV-COMP Runtime Exception benchmark set** as well as the **ReachSafety benchmark set**. Please see [spf.xml](https://gitlab.com/sosy-lab/sv-comp/bench-defs/-/blob/main/benchmark-defs/spf.xml?ref_type=heads), [ReachSafety-Java.set](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/blob/main/java/ReachSafety-Java.set?ref_type=heads) and [properties](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/-/tree/5393b24a8864900ae00b6b159b7d9405b04fc62a/java/properties).
 
 <br>
 
