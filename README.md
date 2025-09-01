@@ -74,14 +74,20 @@ Also use this `run config` it will help in running the tests/examples in SPF, ju
 </component>
 ```
 
-Follow the readme of these to setup the benchmark definitions:
+<br>
+
+Follow the instructions on these files to setup the benchmark definitions:
 
 1. [Competition Scripts](https://gitlab.com/sosy-lab/benchmarking/competition-scripts/#instructions-for-execution-and-reproduction)
 2. [bench-defs](https://gitlab.com/sosy-lab/sv-comp/bench-defs)
 3. [Benchexec - Install.md](https://github.com/sosy-lab/benchexec/blob/main/doc/INSTALL.md)
 
+<br>
+
 > [!WARNING]
-> [Please setup carefully and look out for issues related to cgroups]
+> Please setup carefully and look out for issues related to cgroups
+
+<br>
 
 So there are two modes in the benchmarks can be executed upon tools like SPF
 
@@ -92,6 +98,8 @@ So there are two modes in the benchmarks can be executed upon tools like SPF
 scripts/execute_runs/execute-runcollection.sh     benchexec/bin/benchexec     archives/2025/spf.zip     benchmark-defs/spf.xml     witness.graphml     results-verified/     -t RuntimeException-Java         --timelimit 900 --memorylimit 3GB --limitCores 1 --numOfThreads 8     --read-only-dir / --overlay-dir /home/ --overlay-dir ./
 ```
 
+<br>
+
 2. ReachSafety
 
 ```bash
@@ -99,4 +107,9 @@ scripts/execute_runs/execute-runcollection.sh     benchexec/bin/benchexec     ar
 scripts/execute_runs/execute-runcollection.sh     benchexec/bin/benchexec     archives/2025/spf.zip     benchmark-defs/spf.xml     witness.graphml     results-verified/     -t ReachSafety-Java         --timelimit 900 --memorylimit 3GB --limitCores 1 --numOfThreads 8     --read-only-dir / --overlay-dir /home/ --overlay-dir ./
 ```
 
-Please remember to add a zip file of SPF in the `archives/2025/` folder 
+Please remember to add a zip file of SPF in the `archives/2025/` folder. You can create a zip using this command:
+
+```bash
+zip -r spf.zip SPF/
+```
+
