@@ -113,3 +113,14 @@ Please remember to add a zip file of SPF in the `archives/2025/` folder. You can
 zip -r spf.zip SPF/
 ```
 
+So I three folders of SPF:
+
+1. One was the local clone of the fork of the main repo that is (jpf-symbc), this was to make commits, added the correct and finaly tested code.
+2. One was the same as above but I used it only for testing.
+3. Was the SPF version from the **sv-comp** branch.
+
+First I wrote the code in the `2` folder and tested it, then when I thought it can now be added and used then I made use of the `1` folder which will push the changes to my fork of the main repo and will help me in creating a pr. The `3` folder was just to see what difference things produce when a support is being added and how it was behaving earlier and how is it behaving now.
+
+Then I created the zip of the `1` folder using the commands given above and I pasted it in the `archives/2025` folder and try to run both it over both modes using the commands given above.
+
+Then after the results were added in the `results-verified` udner `bench-defs` a command will appear at least to generate tables for the results produced (html, csv), just run that.
