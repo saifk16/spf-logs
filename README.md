@@ -5,7 +5,6 @@
 
 Please see the report => [Support_For_RuntimeException_In_SPF_GSoC_2025.md](/Support_For_RuntimeException_In_SPF_GSoC_2025.md)
 
-<br>
 
 ## 📁 Repository Structure
 
@@ -35,3 +34,21 @@ README.md
 2. IntelliJ IDEA Community (For Testing)
 3. OS: Ubuntu 22.04.5 (Jammy)
 4. IntelliJ PyCharm (For the benchmark definitions from sosy-labs)
+
+### How to setup spf repository locally and run benchmarks
+
+```bash
+# Clone the repo
+git clone -b runtime-exception --recurse-submodules git@github.com:SymbolicPathFinder/jpf-symbc.git SPF
+
+# Move the folder
+cd SPF
+
+# Build jpf-core
+gradle jpf-core:buildJars
+
+# Build jpf-symbc
+gradle jpf-symbc:buildJars
+```
+
+Rest can be found [here](https://github.com/SymbolicPathFinder/jpf-symbc/tree/runtime-exception)
