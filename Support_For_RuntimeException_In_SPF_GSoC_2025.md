@@ -109,13 +109,15 @@ A set of quick links are provided below for easy reference. For more information
 
 This project has substantially enhanced SPF's capability to handle runtime exceptions, leading to a remarkable improvement in **SV-COMP benchmark scores**.
 
-The most notable achievement was the improvement in **SV-COMP Runtime Exception benchmark scores**, with the overall score increasing **from -3906 to 910** (maximum possible: 1327).  
+The most notable achievement was the improvement in **SV-COMP Runtime Exception benchmark scores**, with the overall score for runtime exception mode increasing **from -3906 to 910** (maximum possible: 1327).  
 
 This improvement was achieved through:
 - Reducing incorrect results from **278 → 2**
 - Increasing correct classifications from **275 → 492**
 - Completely eliminating incorrect false results from **278 → 0**
 - `2` is for the incorrect true results, [see logs](/logs/SPF-2.0/Date-26Aug/runtime-exception/)
+
+For reach safety mode you can observe slight changes in the results, with the score improving from `-606` to `-571` and a small reduction in incorrect results from `46` to `40`, unknowns got increased from `120` to `172`.
 
 <br>
 
@@ -298,7 +300,7 @@ The results demonstrate a significant improvement in SPF's performance with the 
 
 <br>
 
-The improvements are visible in the overall score, which increased from `-3906` to `910` max being `1327`. This substantial change can be attributed to several key factors:
+The improvements are visible in the overall score for runtime exception mode, which increased from `-3906` to `910` max being `1327`. This substantial change can be attributed to several key factors:
 
 - **Reduction in incorrect results:** The incorrect results dropped from `278` to just `2`, with *incorrect false* being dropped from `278` to `0`.
 - **Significant increase in correct classifications:** Correct results improved from `275` to `492`.
@@ -310,7 +312,7 @@ echo "symbolic.string_dp=z3str3" >> $DIR/config.jpf
 
 <br>
 
-For the **ReachSafety** benchmarks, you can observe slight improvements in the results, with the score improving from `-606` to `-571` and a small reduction in incorrect results from `46` to `40`, unknowns from `120` to `172`. These modest changes are primarily attributed to the same script refinements and solver improvements (Z3str3 addition) mentioned above, rather than any runtime exception support additions. These benchmarks focus purely on assertion-based reachability.
+For the **ReachSafety** benchmarks, you can observe slight improvements in the results, with the score improving from `-606` to `-571` and a small reduction in incorrect results from `46` to `40`, unknowns got increased from `120` to `172`. These modest changes are primarily attributed to the same script refinements and solver improvements (Z3str3 addition) mentioned above, rather than any runtime exception support additions. These benchmarks focus purely on assertion-based reachability.
 
 <br>
 

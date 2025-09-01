@@ -113,7 +113,7 @@ Please remember to add a zip file of SPF in the `archives/2025/` folder. You can
 zip -r spf.zip SPF/
 ```
 
-So I three folders of SPF:
+So I had three folders of SPF:
 
 1. One was the local clone of the fork of the main repo that is (jpf-symbc), this was to make commits, added the correct and finaly tested code.
 2. One was the same as above but I used it only for testing.
